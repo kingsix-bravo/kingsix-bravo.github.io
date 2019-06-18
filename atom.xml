@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Gridea</title>
-    <updated>2019-06-18T16:27:48.555Z</updated>
+    <updated>2019-06-18T16:28:44.720Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[blog #001]]></title>
+        <id>https://kingsix-bravo.github.io/post/blog-001</id>
+        <link href="https://kingsix-bravo.github.io/post/blog-001">
+        </link>
+        <updated>2019-06-18T16:28:14.000Z</updated>
+        <content type="html"><![CDATA[<p>Test, test~</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://kingsix-bravo.github.io/post/hello-gridea</id>
