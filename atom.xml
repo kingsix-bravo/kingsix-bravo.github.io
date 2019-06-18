@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-06-18T16:40:57.264Z</updated>
+    <updated>2019-06-18T16:45:42.377Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[blog #004: a pirate bookstore is a dream that went way back]]></title>
+        <id>https://kingsix-bravo.github.io/post/blog-004-a-pirate-bookstore-is-a-dream-that-went-way-back</id>
+        <link href="https://kingsix-bravo.github.io/post/blog-004-a-pirate-bookstore-is-a-dream-that-went-way-back">
+        </link>
+        <updated>2019-06-18T16:45:08.000Z</updated>
+        <content type="html"><![CDATA[<p>https://github.com/kingsix-bravo/kingsix-bravo.github.io/blob/master/UTF-8-%E6%98%9F%E8%BE%B0%E7%9A%84%E7%B9%BC%E6%89%BF%E8%80%85-%E8%A9%B9%E5%A7%86%E6%96%AF.%E9%9C%8D%E6%A0%B9James_Patrick_Hogan_%E8%91%97_%E6%AD%B8%E4%B9%9F%E5%85%89_%E8%AF%91.mobi?raw=true</p>
+<p>Can you download this file?</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[blog #003: MD test]]></title>
         <id>https://kingsix-bravo.github.io/post/blog-003-md-test</id>
