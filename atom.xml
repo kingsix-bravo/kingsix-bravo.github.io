@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-06-18T16:28:44.720Z</updated>
+    <title>Axiom space</title>
+    <updated>2019-06-18T16:29:47.172Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>Combinatorial we stand, discrete we fall!</subtitle>
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, Axiom space</rights>
     <entry>
         <title type="html"><![CDATA[blog #001]]></title>
         <id>https://kingsix-bravo.github.io/post/blog-001</id>
