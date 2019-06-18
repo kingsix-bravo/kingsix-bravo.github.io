@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-06-18T16:36:58.718Z</updated>
+    <updated>2019-06-18T16:38:16.183Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[blog #003: MD test]]></title>
+        <id>https://kingsix-bravo.github.io/post/blog-003-md-test</id>
+        <link href="https://kingsix-bravo.github.io/post/blog-003-md-test">
+        </link>
+        <updated>2019-06-18T16:37:13.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="this-file-tests-the-availability-of-md-interpretation">This file tests the availability of MD interpretation</h2>
+<p>#of whatever I'm using now</p>
+<p><em>MD</em> stands for markDown, I suppose.</p>
+<p><em>As</em> opposed to markUp language, I suppose.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[blog #002]]></title>
         <id>https://kingsix-bravo.github.io/post/blog-002</id>
