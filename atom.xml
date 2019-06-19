@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-06-19T13:34:25.722Z</updated>
+    <updated>2019-06-19T13:40:47.011Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -16,22 +16,6 @@
         <link href="https://kingsix-bravo.github.io/post/blog-005-20190619">
         </link>
         <updated>2019-06-19T13:26:25.000Z</updated>
-        <content type="html"><![CDATA[<ul>
-<li>
-<p>昨天丈母娘来了</p>
-</li>
-<li></li>
-<li>
-<p>老婆生日快到了还没买礼物 亚历山大</p>
-</li>
-<li>
-<p>索尼8500可以接u盘看视频，nice。但电视上看纪录片不能倍速快放，急得蛋疼。</p>
-</li>
-<li>
-<p>不知播放h265 HDR时好像颜色很失真？</p>
-</li>
-</ul>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[blog #004: a pirate bookstore is a dream that went way back]]></title>
@@ -39,9 +23,6 @@
         <link href="https://kingsix-bravo.github.io/post/blog-004-a-pirate-bookstore-is-a-dream-that-went-way-back">
         </link>
         <updated>2019-06-18T16:45:08.000Z</updated>
-        <content type="html"><![CDATA[<p>https://github.com/kingsix-bravo/kingsix-bravo.github.io/blob/master/UTF-8-%E6%98%9F%E8%BE%B0%E7%9A%84%E7%B9%BC%E6%89%BF%E8%80%85-%E8%A9%B9%E5%A7%86%E6%96%AF.%E9%9C%8D%E6%A0%B9James_Patrick_Hogan_%E8%91%97_%E6%AD%B8%E4%B9%9F%E5%85%89_%E8%AF%91.mobi?raw=true</p>
-<p>Can you download this file?</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[blog #003: MD test]]></title>
@@ -49,13 +30,6 @@
         <link href="https://kingsix-bravo.github.io/post/blog-003-md-test">
         </link>
         <updated>2019-06-18T16:37:13.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="this-file-tests-the-availability-of-md-interpretation">This file tests the availability of MD interpretation</h2>
-<p>#of whatever I'm using now</p>
-<p><em>MD</em> stands for markDown, I suppose.</p>
-<p><em>As</em> opposed to markUp language, I suppose.</p>
-<p>#I wonder how i can have latex support? #</p>
-<p>It would be a shame if I end up with no latex....</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[blog #002]]></title>
@@ -63,8 +37,6 @@
         <link href="https://kingsix-bravo.github.io/post/blog-002">
         </link>
         <updated>2019-06-18T16:31:47.000Z</updated>
-        <content type="html"><![CDATA[<p>I am not sure this is my blog yet (unless I can see this page!)</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[blog #001]]></title>
@@ -72,7 +44,5 @@
         <link href="https://kingsix-bravo.github.io/post/blog-001">
         </link>
         <updated>2019-06-18T16:28:14.000Z</updated>
-        <content type="html"><![CDATA[<p>Test, test~</p>
-]]></content>
     </entry>
 </feed>
