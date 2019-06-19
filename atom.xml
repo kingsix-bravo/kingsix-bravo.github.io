@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-06-19T13:29:57.758Z</updated>
+    <updated>2019-06-19T13:32:23.966Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -16,10 +16,21 @@
         <link href="https://kingsix-bravo.github.io/post/blog-005-20190619">
         </link>
         <updated>2019-06-19T13:26:25.000Z</updated>
-        <content type="html"><![CDATA[<p>###昨天丈母娘来了</p>
-<p>####老婆生日快到了还没买礼物 亚历山大</p>
-<p>##电视上看纪录片不能倍速快放，急得蛋疼。</p>
-<p>#囧</p>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p>昨天丈母娘来了</p>
+</li>
+<li></li>
+<li>
+<p>老婆生日快到了还没买礼物 亚历山大</p>
+</li>
+<li>
+<p>索尼8500可以接u盘看视频，nice。但电视上看纪录片不能倍速快放，急得蛋疼。</p>
+</li>
+<li>
+<p>不知播放h265 HDR时好像颜色很失真？</p>
+</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
