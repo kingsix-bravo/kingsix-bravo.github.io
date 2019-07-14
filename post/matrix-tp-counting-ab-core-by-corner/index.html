@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Matrix TP: counting ab core by Corner | Axiom space</title>
-<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1563096252198">
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1563098246244">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kingsix-bravo.github.io">
-  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1563096252198" alt="">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1563098246244" alt="">
   </a>
   <h1 class="site-title">
     Axiom space
@@ -139,7 +139,7 @@ Huang and Wang: n,n+1-core counted by corner is Narayana.</p>
 </code></pre>
 <p>Minors of sizes&lt;=8 are all non-negative.</p>
 <p>We skip n, kn+a type here. Rest assured that n,3n-1 is checked, to say the least.</p>
-<p>What people don't often realize is that we may also consider 2n+1, 3n+1 cores.</p>
+<p>What people don't often realize is that we may also consider 2n-1, 3n-1 cores.</p>
 <p>This is where things go wrong.</p>
 <pre><code>[   1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0]
 [   1    3    2    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0]
@@ -153,6 +153,12 @@ Huang and Wang: n,n+1-core counted by corner is Narayana.</p>
 [5112 4423 3395]
 </code></pre>
 <p>with determinant -43088. Sucks!</p>
+<p>Again we look at the n,2n-1 case. We check out the columns.</p>
+<p>The first column <code>1,1,1...</code> is constant. The second <code>1,3,6,10</code> is the choose-2 binomial number.
+The third is 2*binomial(n,4).</p>
+<p>The fourth col does not seem polynomial at first: 	
+[0, 0, 0, 1, 9, 45, 160, 455, 1106, 2394</p>
+<p>but it is infact a pol of degree 6.</p>
 
             </div>
           </article>
