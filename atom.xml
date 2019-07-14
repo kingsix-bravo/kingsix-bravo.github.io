@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-07-14T08:22:57.806Z</updated>
+    <updated>2019-07-14T08:24:24.498Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[Matrix TP: counting ab core by Corner]]></title>
+        <id>https://kingsix-bravo.github.io/post/matrix-tp-counting-ab-core-by-corner</id>
+        <link href="https://kingsix-bravo.github.io/post/matrix-tp-counting-ab-core-by-corner">
+        </link>
+        <updated>2019-07-14T08:23:00.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[freemdict.com是个好地方！]]></title>
         <id>https://kingsix-bravo.github.io/post/freemdictcom-shi-ge-hao-di-fang</id>
@@ -72,18 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/blog-008-really-not-a-good-idea-to-sync">
         </link>
         <updated>2019-06-24T16:59:10.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[blog #007 20190623]]></title>
-        <id>https://kingsix-bravo.github.io/post/blog-007-20190623</id>
-        <link href="https://kingsix-bravo.github.io/post/blog-007-20190623">
-        </link>
-        <updated>2019-06-23T03:01:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>D5606 AQ-NJN 1420h 01-6D
-G152 NJN-TJN 1734h 14-9A</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>D5606 AQ-NJN 1420h 01-6D
-G152 NJN-TJN 1734h 14-9A</p>
-]]></content>
     </entry>
 </feed>
