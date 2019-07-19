@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mathematica  | Axiom space</title>
-<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1563524066934">
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1563545016776">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kingsix-bravo.github.io">
-  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1563524066934" alt="">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1563545016776" alt="">
   </a>
   <h1 class="site-title">
     Axiom space
@@ -88,7 +88,30 @@
             </div>
             
             <div class="post-content">
-              <p>如何批量去掉表格如
+              <h2 id="module">Module</h2>
+<p>to define a module by</p>
+<p>Module[{list of local variables}, things to do]</p>
+<pre><code>In[75]:= F[n_] := 
+  Module[{tempsum}, tempsum = 0; Do[tempsum = tempsum + i, {i, 1, n}];
+    tempsum];
+Table[F[n], {n, 1, 10}]
+
+Out[76]= {1, 3, 6, 10, 15, 21, 28, 36, 45, 55}
+</code></pre>
+<h2 id="do-loop">Do loop</h2>
+<pre><code>s=0;
+Do[s = s + 1; Print[i, &quot; &quot;, s], {i, 1, 10}]
+</code></pre>
+<p>Or simply，to repeat 10 times,</p>
+<pre><code>s=0;
+Do[s=s+1;Print[s], 10]
+</code></pre>
+<p>Or loop through a list:</p>
+<pre><code>s=0;
+Do[s=s+i;Print[i,&quot; &quot;,s], {i,{1,5,6,2}}]
+</code></pre>
+<hr>
+<p>如何批量去掉表格如
 {yy -&gt; 8.90323265887200425958769930845,
 yy -&gt; 8.90323265943529241591021289811,
 yy -&gt; 8.90323265800195651367281533850}中的右箭头？谢谢！
