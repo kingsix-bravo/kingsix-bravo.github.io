@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-07-25T07:05:49.548Z</updated>
+    <updated>2019-07-26T07:01:53.541Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[word of the day ]]></title>
+        <id>https://kingsix-bravo.github.io/post/word-of-the-day</id>
+        <link href="https://kingsix-bravo.github.io/post/word-of-the-day">
+        </link>
+        <updated>2019-07-26T06:59:03.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[mathematica ]]></title>
         <id>https://kingsix-bravo.github.io/post/mathematica</id>
@@ -72,12 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/moving-day">
         </link>
         <updated>2019-07-08T16:12:41.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[徐州最后一天]]></title>
-        <id>https://kingsix-bravo.github.io/post/xu-zhou-zui-hou-yi-tian</id>
-        <link href="https://kingsix-bravo.github.io/post/xu-zhou-zui-hou-yi-tian">
-        </link>
-        <updated>2019-07-07T13:11:45.000Z</updated>
     </entry>
 </feed>
