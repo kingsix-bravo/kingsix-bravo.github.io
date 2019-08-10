@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Experiencing typhoon first-hand! | Axiom space</title>
+<title>python hash md5 | Axiom space</title>
 <link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1565399923464">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,18 +74,63 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Experiencing typhoon first-hand!
+              python hash md5
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-07-03 ·
+                · 2019-08-09 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>The wind is not unprecedentedly fierce though.</p>
-<p><img src="https://wx4.sinaimg.cn/mw690/75fab626gy1g4mr05y8yfj21400u0qv6.jpg" alt="View from my balcony"></p>
+              <p>Original url: https://www.cnblogs.com/AYxing/p/8679334.html</p>
+<pre><code>
+# @File    : 4.10.hash加密算法.py
+# @Software: PyCharm
+
+import hashlib
+
+# 1.将字符串，通过加密算法，变成固定长度的输出
+s = 'abc'
+print(len(str(hash(s)))*4, hash(s))
+
+# 2.生成md5数字指纹。
+# 第1种写法：
+s2 = b'!@abc'  # 定义字节型字符串
+md = hashlib.md5()  # 导入md5算法
+md.update(s2)  # 把值传给md5算法
+
+print(md.digest())  # 生成一个128位的2进制数
+print('MD5', '长度:', len(md.hexdigest())*4, md.hexdigest())
+# 第2种写法：
+print(hashlib.md5(&quot;!@abc&quot;.encode(&quot;utf-8&quot;)).hexdigest())
+
+# 3.SHA-1
+
+hash = hashlib.sha1()
+hash.update('admin'.encode('utf-8'))
+print('SHA-1', '长度:', len(hash.hexdigest())*4, hash.hexdigest())
+
+# 4.SHA-256
+
+hash = hashlib.sha256()
+hash.update('admin'.encode('utf-8'))
+print('SHA-256', '长度:', len(hash.hexdigest())*4, hash.hexdigest())
+
+# 5.SHA-384
+
+hash = hashlib.sha384()
+hash.update('admin'.encode('utf-8'))
+print('SHA-384', '长度:', len(hash.hexdigest())*4, hash.hexdigest())
+
+# 5.SHA-512
+
+hash = hashlib.sha512()
+hash.update('admin'.encode('utf-8'))
+print('SHA-384', '长度:', len(hash.hexdigest())*4, hash.hexdigest())
+
+</code></pre>
 
             </div>
           </article>
@@ -94,9 +139,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://kingsix-bravo.github.io/post/blog-009-20190624">
+            <a href="https://kingsix-bravo.github.io/post/updated-my-github-pw">
               <h3 class="post-title">
-                blog #009 20190624
+                updated my github pw.
               </h3>
             </a>
           </div>
