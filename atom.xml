@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-08-10T01:18:48.226Z</updated>
+    <updated>2019-08-17T11:14:11.348Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[煎蛋盗图～～[更新中]]]></title>
+        <id>https://kingsix-bravo.github.io/post/jian-dan-dao-tu-~~</id>
+        <link href="https://kingsix-bravo.github.io/post/jian-dan-dao-tu-~~">
+        </link>
+        <updated>2019-08-17T11:12:41.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[use random id to identify yield-generators]]></title>
         <id>https://kingsix-bravo.github.io/post/use-random-id-to-identify-yield-generators</id>
@@ -76,12 +83,5 @@
         <link href="https://kingsix-bravo.github.io/post/mathematica-zhong-ge-chong-fu-hao-shi-shi-me-yi-si-bi-ru">
         </link>
         <updated>2019-07-16T02:09:13.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Eulerian matrix of size 6]]></title>
-        <id>https://kingsix-bravo.github.io/post/eulerian-matrix-of-size-6</id>
-        <link href="https://kingsix-bravo.github.io/post/eulerian-matrix-of-size-6">
-        </link>
-        <updated>2019-07-15T01:10:50.000Z</updated>
     </entry>
 </feed>
