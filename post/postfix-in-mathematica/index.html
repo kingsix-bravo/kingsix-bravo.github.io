@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>blog #006 20190622 | Axiom space</title>
+<title>postfix in mathematica | Axiom space</title>
 <link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1566119867805">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,27 +74,25 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              blog #006 20190622
+              postfix in mathematica
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-06-23 ·
+                · 2019-08-18 ·
               </time>
               
-                <a href="https://kingsix-bravo.github.io/tag/sypZ_bQ2h" class="post-tag">
-                  # diary
+                <a href="https://kingsix-bravo.github.io/tag/mathematica" class="post-tag">
+                  # mathematica
                 </a>
               
             </div>
             
             <div class="post-content">
-              <ul>
-<li>去看了爷爷，还拿了箱牛奶回来：）</li>
-<li>参加了wjw的婚礼！还碰到了若干小学、初中同学</li>
-<li>听说现在安庆的婚庆公司都跟酒店绑定了，如果去xx酒店而不选用f(xx)婚庆公司的话，就要额外交钱～</li>
-<li>伴娘还挺高的。幸好没有穿高跟鞋而力压新郎</li>
-<li>获我妈赠半包蔓越莓</li>
-</ul>
+              <p>我有一个多项式F,可以用CoefficientList[F,q]写出其系数。</p>
+<p>但如何写成postfix的形式？比如F // CoefficientList[#, q] 这种形式。我试了很多次 .</p>
+<p>只需要：</p>
+<p>F // Function[CoefficientList[#, x]]</p>
+<p>即可。</p>
 
             </div>
           </article>
@@ -103,9 +101,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://kingsix-bravo.github.io/post/blog-005-20190619">
+            <a href="https://kingsix-bravo.github.io/post/shang-li-yong-li-bai">
               <h3 class="post-title">
-                blog #005 20190619
+                上李邕 李白
               </h3>
             </a>
           </div>
