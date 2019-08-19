@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-08-18T09:22:45.427Z</updated>
+    <updated>2019-08-19T08:57:42.450Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[howdoi]]></title>
+        <id>https://kingsix-bravo.github.io/post/howdoi</id>
+        <link href="https://kingsix-bravo.github.io/post/howdoi">
+        </link>
+        <updated>2019-08-19T08:47:29.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[postfix in mathematica]]></title>
         <id>https://kingsix-bravo.github.io/post/postfix-in-mathematica</id>
@@ -76,12 +83,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>中心前面的广场开挖了，好像要建设游乐场。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[word of the day ]]></title>
-        <id>https://kingsix-bravo.github.io/post/word-of-the-day</id>
-        <link href="https://kingsix-bravo.github.io/post/word-of-the-day">
-        </link>
-        <updated>2019-07-26T06:59:03.000Z</updated>
     </entry>
 </feed>

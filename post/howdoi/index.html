@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>上李邕 李白 | Axiom space</title>
+<title>howdoi | Axiom space</title>
 <link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1566205059328">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,27 +74,47 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              上李邕 李白
+              howdoi
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-08-18 ·
+                · 2019-08-19 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <pre><code>上李邕yōng
-
-            李白  
-
-　　大鹏一日同风起，扶摇直上九万里。
-　　假令风歇时下来，犹能簸却沧溟水。
-　　世人见我恒殊调，闻余大言皆冷笑。
-　　宣父犹能畏后生，丈夫未可轻年少。
-	```
-	
+              <p>this is an interesting python application that lets you search for coding solutions in a console (without web-surfing, emm).</p>
+<p>I downloaded the lot from github and decompressed. Running</p>
+<pre><code>python setup.py install
 </code></pre>
+<p>brings mixed information. While some things are installed successfully, a bug also shows up:</p>
+<pre><code>Installed c:\python27\lib\site-packages\howdoi-1.2.1-py2.7.egg
+Processing dependencies for howdoi==1.2.1
+Searching for appdirs
+Reading https://pypi.org/simple/appdirs/
+Download error on https://pypi.org/simple/appdirs/: [Errno 1] _ssl.c:504: error:
+1407742E:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert protocol version -- Som
+e packages may not be found!
+Couldn't find index page for 'appdirs' (maybe misspelled?)
+Scanning index of all packages (this may take a while)
+Reading https://pypi.org/simple/
+Download error on https://pypi.org/simple/: [Errno 1] _ssl.c:504: error:1407742E
+:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert protocol version -- Some packag
+es may not be found!
+No local packages or working download links found for appdirs
+error: Could not find suitable distribution for Requirement.parse('appdirs')
+</code></pre>
+<p>It later dawned on me that <code>appdirs</code> is a python package so I manually ran</p>
+<pre><code>pip install appdirs
+</code></pre>
+<p>which brings more mixed info:</p>
+<pre><code>ERROR: howdoi 1.2.1 requires cachelib, which is not installed.
+ERROR: howdoi 1.2.1 requires pyquery, which is not installed.
+Installing collected packages: appdirs
+Successfully installed appdirs-1.4.3
+</code></pre>
+<p>So in the end it works: it tells me that it could not establish internet connection.</p>
 
             </div>
           </article>
@@ -103,9 +123,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://kingsix-bravo.github.io/post/current-blog">
+            <a href="https://kingsix-bravo.github.io/post/postfix-in-mathematica">
               <h3 class="post-title">
-                current blog
+                postfix in mathematica
               </h3>
             </a>
           </div>
