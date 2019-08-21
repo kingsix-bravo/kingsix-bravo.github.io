@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mathematica中各种符号是什么意思，比如@ , /, @@@  | Axiom space</title>
-<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1566377454005">
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1566380570543">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kingsix-bravo.github.io">
-  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1566377454005" alt="">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1566380570543" alt="">
   </a>
   <h1 class="site-title">
     Axiom space
@@ -88,21 +88,21 @@
             </div>
             
             <div class="post-content">
-              <p>@是前缀，
-Prefix[f[expr]]
-以缺省形式 f@expr 输出给定的 f[expr].
-Prefix[f[expr],h]
+              <p>@是前缀，<br>
+Prefix[f[expr]]<br>
+以缺省形式 f@expr 输出给定的 f[expr].<br>
+Prefix[f[expr],h]<br>
 输出为 hexpr.</p>
 <hr>
-<p>@@是APPLY
-Apply (@@)(应用)	[SpanFromLeft]
-Apply[f,expr]
-或 f@@expr 用 f 替换 expr 的头部.
-Apply[f,expr,{1}]
-或 f@@@expr 用 f 替换 expr 的第 1 层的头部.
-Apply[f,expr,levelspec]
-替换 expr 中使用 levelspec 指定的部分的头部.
-Apply[f]
+<p>@@是APPLY<br>
+Apply (@@)(应用)	[SpanFromLeft]<br>
+Apply[f,expr]<br>
+或 f@@expr 用 f 替换 expr 的头部.<br>
+Apply[f,expr,{1}]<br>
+或 f@@@expr 用 f 替换 expr 的第 1 层的头部.<br>
+Apply[f,expr,levelspec]<br>
+替换 expr 中使用 levelspec 指定的部分的头部.<br>
+Apply[f]<br>
 表示 Apply 的运算符形式，它可以应用于表达式.</p>
 <pre><code>In[1]:= Apply[f, {a, b, c, d}]
 
@@ -118,18 +118,18 @@ Out[3]= a + b + c + d
 </code></pre>
 <hr>
 <p>@@@</p>
-<p>Apply[f,expr]
-或 f@@expr 用 f 替换 expr 的头部.
-Apply[f,expr,{1}]
+<p>Apply[f,expr]<br>
+或 f@@expr 用 f 替换 expr 的头部.<br>
+Apply[f,expr,{1}]<br>
 或 f@@@expr 用 f 替换 expr 的第 1 层的头部.</p>
 <hr>
-<p>expr /. rules表示应用一个规则或规则列表尽可能转换一个表达式 expr 的每个子部分,例如
-{x, x^2, y, z} /. x -&gt; a 就可以把列表中的x全部替换成a了
+<p>expr /. rules表示应用一个规则或规则列表尽可能转换一个表达式 expr 的每个子部分,例如<br>
+{x, x^2, y, z} /. x -&gt; a 就可以把列表中的x全部替换成a了<br>
 再如{a, b, c} /. List -&gt; f 结构的头部就从List换成f了,变成f[a,b,c]</p>
 <hr>
-<p>//表示在表达示的结尾进行下一个运算。
-比如list={1,2}
-list//Total就是在结尾进行求和运算，
+<p>//表示在表达示的结尾进行下一个运算。<br>
+比如list={1,2}<br>
+list//Total就是在结尾进行求和运算，<br>
 如果不用//就Total@@list，则Total函数在前面计算，</p>
 <hr>
 <p>#&amp;</p>
