@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-08-21T09:44:25.597Z</updated>
+    <updated>2019-09-03T06:01:02.758Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[seven～]]></title>
+        <id>https://kingsix-bravo.github.io/post/seven~</id>
+        <link href="https://kingsix-bravo.github.io/post/seven~">
+        </link>
+        <updated>2019-09-03T06:00:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DIY chrome new tab page!]]></title>
+        <id>https://kingsix-bravo.github.io/post/diy-chrome-new-tab-page</id>
+        <link href="https://kingsix-bravo.github.io/post/diy-chrome-new-tab-page">
+        </link>
+        <updated>2019-08-23T01:11:50.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DifferenceRootReduce is awesome [in Mathematica(R)]]]></title>
         <id>https://kingsix-bravo.github.io/post/differencerootreduce-is-awesome-in-mathematicar</id>
@@ -65,19 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/jian-dan-dao-tu">
         </link>
         <updated>2019-08-17T11:12:41.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[use random id to identify yield-generators]]></title>
-        <id>https://kingsix-bravo.github.io/post/use-random-id-to-identify-yield-generators</id>
-        <link href="https://kingsix-bravo.github.io/post/use-random-id-to-identify-yield-generators">
-        </link>
-        <updated>2019-08-10T01:17:43.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python hash md5]]></title>
-        <id>https://kingsix-bravo.github.io/post/python-hash-md5</id>
-        <link href="https://kingsix-bravo.github.io/post/python-hash-md5">
-        </link>
-        <updated>2019-08-09T05:17:45.000Z</updated>
     </entry>
 </feed>
