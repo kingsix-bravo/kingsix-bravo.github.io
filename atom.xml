@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-09-04T16:57:22.356Z</updated>
+    <updated>2019-09-10T14:48:14.249Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[微波炉的fun fact]]></title>
+        <id>https://kingsix-bravo.github.io/post/wei-bo-lu-de-fun-fact</id>
+        <link href="https://kingsix-bravo.github.io/post/wei-bo-lu-de-fun-fact">
+        </link>
+        <updated>2019-09-10T14:47:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[sagemath: parallel and timing]]></title>
+        <id>https://kingsix-bravo.github.io/post/sagemath-parallel-and-timing</id>
+        <link href="https://kingsix-bravo.github.io/post/sagemath-parallel-and-timing">
+        </link>
+        <updated>2019-09-08T14:02:08.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[这就是为什么不应该在网上抄看不懂的代码]]></title>
         <id>https://kingsix-bravo.github.io/post/zhe-jiu-shi-wei-shi-me-bu-ying-gai-zai-wang-shang-chao-kan-bu-dong-de-dai-ma</id>
@@ -65,19 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/postfix-in-mathematica">
         </link>
         <updated>2019-08-18T09:17:14.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[上李邕 李白]]></title>
-        <id>https://kingsix-bravo.github.io/post/shang-li-yong-li-bai</id>
-        <link href="https://kingsix-bravo.github.io/post/shang-li-yong-li-bai">
-        </link>
-        <updated>2019-08-18T06:31:35.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[current blog]]></title>
-        <id>https://kingsix-bravo.github.io/post/current-blog</id>
-        <link href="https://kingsix-bravo.github.io/post/current-blog">
-        </link>
-        <updated>2019-08-18T02:04:39.000Z</updated>
     </entry>
 </feed>
