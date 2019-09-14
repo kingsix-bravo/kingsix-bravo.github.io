@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2019-09-10T14:48:14.249Z</updated>
+    <updated>2019-09-14T07:26:41.832Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[随机数与进度条[m-ca]]]></title>
+        <id>https://kingsix-bravo.github.io/post/sui-ji-shu-yu-jin-du-tiao-m-ca</id>
+        <link href="https://kingsix-bravo.github.io/post/sui-ji-shu-yu-jin-du-tiao-m-ca">
+        </link>
+        <updated>2019-09-14T07:25:22.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[微波炉的fun fact]]></title>
         <id>https://kingsix-bravo.github.io/post/wei-bo-lu-de-fun-fact</id>
@@ -72,12 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/howdoi">
         </link>
         <updated>2019-08-19T08:47:29.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[postfix in mathematica]]></title>
-        <id>https://kingsix-bravo.github.io/post/postfix-in-mathematica</id>
-        <link href="https://kingsix-bravo.github.io/post/postfix-in-mathematica">
-        </link>
-        <updated>2019-08-18T09:17:14.000Z</updated>
     </entry>
 </feed>
