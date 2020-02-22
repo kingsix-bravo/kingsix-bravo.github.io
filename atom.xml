@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2020-02-13T12:36:40.374Z</updated>
+    <updated>2020-02-22T16:50:33.275Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[书和阅读的问题]]></title>
+        <id>https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti</id>
+        <link href="https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti">
+        </link>
+        <updated>2020-02-22T16:49:59.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[sage] python map 函数和 全局变量]]></title>
         <id>https://kingsix-bravo.github.io/post/sage-python-map-han-shu-he-quan-ju-bian-liang</id>
@@ -72,12 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/zhe-jiu-shi-wei-shi-me-bu-ying-gai-zai-wang-shang-chao-kan-bu-dong-de-dai-ma">
         </link>
         <updated>2019-09-04T16:55:06.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[seven～]]></title>
-        <id>https://kingsix-bravo.github.io/post/seven~</id>
-        <link href="https://kingsix-bravo.github.io/post/seven~">
-        </link>
-        <updated>2019-09-03T06:00:23.000Z</updated>
     </entry>
 </feed>
