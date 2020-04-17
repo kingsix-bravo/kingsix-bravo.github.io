@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2020-04-17T06:36:34.118Z</updated>
+    <updated>2020-04-17T06:37:47.015Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[win英文输入法作为默认输入法]]></title>
+        <id>https://kingsix-bravo.github.io/post/windows10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa</id>
+        <link href="https://kingsix-bravo.github.io/post/windows10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa">
+        </link>
+        <updated>2020-04-17T00:51:34.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[one-liner] process explorer棒极了]]></title>
         <id>https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao</id>
@@ -72,12 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/wei-bo-lu-de-fun-fact">
         </link>
         <updated>2019-09-10T14:47:03.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sagemath: parallel and timing]]></title>
-        <id>https://kingsix-bravo.github.io/post/sagemath-parallel-and-timing</id>
-        <link href="https://kingsix-bravo.github.io/post/sagemath-parallel-and-timing">
-        </link>
-        <updated>2019-09-08T14:02:08.000Z</updated>
     </entry>
 </feed>

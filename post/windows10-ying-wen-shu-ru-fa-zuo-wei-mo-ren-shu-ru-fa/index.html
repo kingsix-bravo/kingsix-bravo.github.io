@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>get python function source by inspect | Axiom space</title>
+<title>win英文输入法作为默认输入法 | Axiom space</title>
 <link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1587105459707">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,38 +74,27 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              get python function source by inspect
+              win英文输入法作为默认输入法
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-08-19 ·
+                · 2020-04-17 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>If the function is from a source file available on the filesystem, then inspect.getsource(foo) might be of help:</p>
-<p>If foo is defined as:</p>
-<pre><code>def foo(arg1,arg2):         
-    #do something with args 
-    a = arg1 + arg2         
-    return a  
-</code></pre>
-<p>Then:</p>
-<pre><code>import inspect
-lines = inspect.getsource(foo)
-print(lines)
-</code></pre>
-<p>Returns:</p>
-<pre><code>def foo(arg1,arg2):         
-    #do something with args 
-    a = arg1 + arg2         
-    return a
-	```
-		
-But I believe that if the function is compiled from a string, stream or imported from a compiled file, then you cannot retrieve its source code.
-
---Rafał Dowgird</code></pre>
+              <p>方法1:已失败</p>
+<p>修改注册表，。。。后来不知怎么又设置了一下输入法就丧失效果了。</p>
+<p>方法2:</p>
+<p>将小狼毫改造成英文输入法。</p>
+<p>最好的办法当然是搞一个输入方案，只输英文，但我还没搞清怎么办。目前临时将小狼毫默认为英文输入：</p>
+<p>【ref】https://www.jianshu.com/p/7eb4a2ac0b69</p>
+<p>摘要：默认情况下，Rime 使用“朙月拼音”，对应的配置文件为 luna_pinyin.schema.yaml。如果想将它设置为默认输入英文，则将该文件中switches-&gt;ascii_mode-&gt;reset的值修改为1即可：</p>
+<p>作者：gaunthan<br>
+链接：https://www.jianshu.com/p/7eb4a2ac0b69<br>
+来源：简书<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
             </div>
           </article>
@@ -114,9 +103,9 @@ But I believe that if the function is compiled from a string, stream or imported
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://kingsix-bravo.github.io/post/howdoi">
+            <a href="https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao">
               <h3 class="post-title">
-                howdoi
+                [one-liner] process explorer棒极了
               </h3>
             </a>
           </div>
