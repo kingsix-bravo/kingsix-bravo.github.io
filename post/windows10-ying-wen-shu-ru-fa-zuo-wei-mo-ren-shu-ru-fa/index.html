@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>win英文输入法作为默认输入法 | Axiom space</title>
-<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1587105459707">
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1587105576526">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kingsix-bravo.github.io">
-  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1587105459707" alt="">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1587105576526" alt="">
   </a>
   <h1 class="site-title">
     Axiom space
@@ -84,17 +84,19 @@
             </div>
             
             <div class="post-content">
-              <p>方法1:已失败</p>
+              <p>#win英文输入法作为默认输入法</p>
+<p>方法1:已失败</p>
 <p>修改注册表，。。。后来不知怎么又设置了一下输入法就丧失效果了。</p>
 <p>方法2:</p>
 <p>将小狼毫改造成英文输入法。</p>
-<p>最好的办法当然是搞一个输入方案，只输英文，但我还没搞清怎么办。目前临时将小狼毫默认为英文输入：</p>
+<p>最好的办法当然是搞一个输入方案，只输英文，但我还没搞清怎么办。目前临时将小狼毫默认为英文输入，参考：</p>
 <p>【ref】https://www.jianshu.com/p/7eb4a2ac0b69</p>
 <p>摘要：默认情况下，Rime 使用“朙月拼音”，对应的配置文件为 luna_pinyin.schema.yaml。如果想将它设置为默认输入英文，则将该文件中switches-&gt;ascii_mode-&gt;reset的值修改为1即可：</p>
-<p>作者：gaunthan<br>
-链接：https://www.jianshu.com/p/7eb4a2ac0b69<br>
-来源：简书<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>当然你可以直接修改yaml文件，或者增加如下的.custom文件：</p>
+<pre><code>patch:
+	switches/ascii_mode:
+		reset:1
+</code></pre>
 
             </div>
           </article>
