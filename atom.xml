@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2020-04-17T06:40:46.842Z</updated>
+    <updated>2020-04-17T06:41:58.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Axiom space</rights>
     <entry>
         <title type="html"><![CDATA[win英文输入法作为默认输入法]]></title>
-        <id>https://kingsix-bravo.github.io/post/windows10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa</id>
-        <link href="https://kingsix-bravo.github.io/post/windows10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa">
+        <id>https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa</id>
+        <link href="https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa">
         </link>
         <updated>2020-04-17T00:51:34.000Z</updated>
     </entry>
