@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2020-06-15T07:48:35.793Z</updated>
+    <updated>2020-06-15T08:01:53.563Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -12,71 +12,71 @@
     <rights>All rights reserved 2020, Axiom space</rights>
     <entry>
         <title type="html"><![CDATA[hotness ]]></title>
-        <id>https://kingsix-bravo.github.io/post/hotness</id>
-        <link href="https://kingsix-bravo.github.io/post/hotness">
+        <id>https://kingsix-bravo.github.io/post/hotness/</id>
+        <link href="https://kingsix-bravo.github.io/post/hotness/">
         </link>
         <updated>2020-06-15T07:47:25.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[qtranslate steals Ctrl+e shortcut]]></title>
-        <id>https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut</id>
-        <link href="https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut">
+        <id>https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/</id>
+        <link href="https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/">
         </link>
         <updated>2020-04-21T06:39:37.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[win英文输入法作为默认输入法]]></title>
-        <id>https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa</id>
-        <link href="https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa">
+        <id>https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/</id>
+        <link href="https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/">
         </link>
         <updated>2020-04-17T00:51:34.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[[one-liner] process explorer棒极了]]></title>
-        <id>https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao</id>
-        <link href="https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao">
+        <id>https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/</id>
+        <link href="https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/">
         </link>
         <updated>2020-03-31T02:48:08.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[书和阅读的问题]]></title>
-        <id>https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti</id>
-        <link href="https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti">
+        <id>https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/</id>
+        <link href="https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/">
         </link>
         <updated>2020-02-22T16:49:59.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[[sage] python map 函数和 全局变量]]></title>
-        <id>https://kingsix-bravo.github.io/post/sage-python-map-han-shu-he-quan-ju-bian-liang</id>
-        <link href="https://kingsix-bravo.github.io/post/sage-python-map-han-shu-he-quan-ju-bian-liang">
+        <id>https://kingsix-bravo.github.io/post/sage-python-map-han-shu-he-quan-ju-bian-liang/</id>
+        <link href="https://kingsix-bravo.github.io/post/sage-python-map-han-shu-he-quan-ju-bian-liang/">
         </link>
         <updated>2020-02-13T12:33:13.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[我这次是如何试图阻止windows锁屏广告的]]></title>
-        <id>https://kingsix-bravo.github.io/post/wo-zhe-ci-shi-ru-he-shi-tu-zu-zhi-windows-suo-ping-guang-gao-de</id>
-        <link href="https://kingsix-bravo.github.io/post/wo-zhe-ci-shi-ru-he-shi-tu-zu-zhi-windows-suo-ping-guang-gao-de">
+        <id>https://kingsix-bravo.github.io/post/wo-zhe-ci-shi-ru-he-shi-tu-zu-zhi-windows-suo-ping-guang-gao-de/</id>
+        <link href="https://kingsix-bravo.github.io/post/wo-zhe-ci-shi-ru-he-shi-tu-zu-zhi-windows-suo-ping-guang-gao-de/">
         </link>
         <updated>2020-02-05T04:51:29.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Interesting story on Medellin]]></title>
-        <id>https://kingsix-bravo.github.io/post/interesting-story-on-medellin</id>
-        <link href="https://kingsix-bravo.github.io/post/interesting-story-on-medellin">
+        <id>https://kingsix-bravo.github.io/post/interesting-story-on-medellin/</id>
+        <link href="https://kingsix-bravo.github.io/post/interesting-story-on-medellin/">
         </link>
         <updated>2020-01-11T02:03:22.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[20191006]]></title>
-        <id>https://kingsix-bravo.github.io/post/20191006 </id>
-        <link href="https://kingsix-bravo.github.io/post/20191006 ">
+        <id>https://kingsix-bravo.github.io/post/20191006/</id>
+        <link href="https://kingsix-bravo.github.io/post/20191006/">
         </link>
         <updated>2019-10-06T15:41:34.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[20191005]]></title>
-        <id>https://kingsix-bravo.github.io/post/20191005</id>
-        <link href="https://kingsix-bravo.github.io/post/20191005">
+        <id>https://kingsix-bravo.github.io/post/20191005/</id>
+        <link href="https://kingsix-bravo.github.io/post/20191005/">
         </link>
         <updated>2019-10-05T10:49:47.000Z</updated>
     </entry>
