@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Axiom space</title>
-    <updated>2020-06-15T14:49:06.459Z</updated>
+    <updated>2020-10-18T15:40:27.528Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[介绍奇怪的网站: Numericana.com]]></title>
+        <id>https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/</id>
+        <link href="https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/">
+        </link>
+        <updated>2020-10-18T15:35:34.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[testest]]></title>
         <id>https://kingsix-bravo.github.io/post/testest/</id>
@@ -72,12 +79,5 @@
         <link href="https://kingsix-bravo.github.io/post/interesting-story-on-medellin/">
         </link>
         <updated>2020-01-11T02:03:22.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20191006]]></title>
-        <id>https://kingsix-bravo.github.io/post/20191006/</id>
-        <link href="https://kingsix-bravo.github.io/post/20191006/">
-        </link>
-        <updated>2019-10-06T15:41:34.000Z</updated>
     </entry>
 </feed>
