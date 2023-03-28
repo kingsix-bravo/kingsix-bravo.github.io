@@ -1,0 +1,318 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>c++的指针和类 | Axiom space</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1679986111609">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1679986111609" alt="">
+  </a>
+  <h1 class="site-title">
+    Axiom space
+  </h1>
+  <p class="site-description">
+    Combinatorial we stand, discrete we fall!
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              c++的指针和类
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2022-11-30 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>啊 这是多大的一个话题呀！</p>
+<p>以前我对类（或者其他数据结构）是如何存在于计算机中这件事情毫无概念。后来感觉后者可能就是一个地址加上数据长度。对于类，可能是（开始处）的地址，加上每个字段的长度。在计算机中定长这件事情很重要。变长的东西处理起来更困难。</p>
+<p>在c++中我们用这样的结构定义一个类</p>
+<p>class monkey{<br>
+public:<br>
+int num;<br>
+void death();</p>
+<pre><code>private:
+
+int age;
+</code></pre>
+<p>}<br>
+类中需要的函数是这样的：<br>
+void monkey::death(){</p>
+<pre><code>return;
+</code></pre>
+<p>}</p>
+<p>下面是猴子环形链表：</p>
+<pre><code>
+
+#include&lt;stdio.h&gt;
+
+
+class monkey{
+public:
+ int num;
+ monkey* prev;
+ monkey* next;
+ };
+
+
+int main(){
+
+
+int i=0;
+monkey f;
+f.prev=&amp;f;
+f.next=&amp;f;
+f.num=1;
+
+int n=9;
+
+
+monkey* cur;
+cur=&amp;f; //first monkey
+printf(&quot;ok\n&quot;);
+monkey *x;
+for (i=2;i&lt;=n;i++){
+	x=new monkey;
+	x-&gt;num=i;
+	x-&gt;prev=cur;
+	x-&gt;next=cur-&gt;next;
+	cur-&gt;next-&gt;prev=x;
+	cur-&gt;next=x;
+	cur=x;
+	printf(&quot;%i: %i\n&quot;,i, x);
+}
+
+printf(&quot;going:\n&quot;);
+cur=&amp;f;
+for(i=1;i&lt;=n;i++){
+	printf(&quot;%i %i \n&quot;,cur, cur-&gt;num);
+	cur=cur-&gt;next;}
+
+return 0;
+}
+</code></pre>
+<p>这个程序可以在win10, devcpp下编译通过给出正确的结果（GCC编译）。在win3.1的turbo c++ 4.5下可以给出一个环形链表，但num是错误的。（可能是显示问题，两个%i都在显示cur的地址）</p>
+<p>为了写这个程序，我莽莽撞撞犯了许多错误。比如：</p>
+<p>x=new monkey可以用monkey* x代替吗？不行。第二次以后就不开辟新的内存位置了。（实际上在gcc下不能重复定义一个变量。）</p>
+<p>这里x和cur 都是猴子指针。如果都是猴子本身可以吗？不行。cur=x是把x的各个属性的值传过去了。而非让cur指向x这个猴子。</p>
+<p>下面是一些对符号的解释。简单地说，&amp;是取地址运算：&amp;x是变量x的地址。对于计算机，地址当然是一个二进制整数。但在c++里不能把地址送入一个整型变量里。你可以进行加法运算，比如对整数的地址加1，结果地址就增加了4，因为一个整数是4byte的。</p>
+<p>相反，*是&amp;的逆运算。</p>
+<p>给了地址y，*y就是内存在该地址的值。</p>
+<p>这基本上是mathematical的了。实际使用上，为了定义一个整数，你可以int a;  然后用&amp;取a的地址。但为了定义一个整数地址变量，你需要</p>
+<p>int* a ;<br>
+或者<br>
+int <em>a；<br>
+这两者似乎是一样的，但后者从数学上更好理解的：一个整数，形如</em>a.但在计算机上说不过去。前者呢，似乎是说<br>
+int*是一种变量，但这也不对。更多的可以参考stroupe的文章，他说前者是c++风格的，后者更接近c风格。</p>
+<p>对于自定义类的变量，也是一样的。方便的是，为了少些(*ptr).value这样的东西，你可以直接写ptr-&gt;value. 就是ptr这个指针对应的类元素的value属性。</p>
+<hr>
+<p>更难以理解的是指针数组:例如</p>
+<pre><code>int *p[3];
+</code></pre>
+<p>是什么？完全无法理解。(当然也有人从运算符的优先级角度解释 -- 但我并没有看出这里有运算符。)如果写成下面形式就可以理解了（如果你承认“指向整数的指针”这一数据类型）：</p>
+<pre><code>	int* p[3]; //p is an array of int* -s.
+	int a=99,b=111,c=144;
+	p[0]= &amp;a;
+	p[1]= &amp;b;
+	p[2]= &amp;c;
+	
+	a++;
+	b++;
+	c++;
+	cout&lt;&lt;*(p[0])&lt;&lt;*(p[1])&lt;&lt;*(p[2])&lt;&lt;endl;
+	// output: 100,112,145
+</code></pre>
+<p>这里p就一个数组，每个元素是<code>int*</code>这一类型。</p>
+<p>另一种指针数组是<code>int (*p)[3]</code>,这是指向3-数组的指针吗？如果你写出</p>
+<pre><code>
+	int (*p)[3];
+	(*p)[0]=44;
+	cout&lt;&lt;(*p)[0]&lt;&lt;endl;
+</code></pre>
+<p>是出bug的，因为这时候p指向的地方还是一片混沌？就好像下面的程序一定要有一句new一样。</p>
+<pre><code>    int *a;
+	a=new int;
+	*a=3;
+	cout&lt;&lt;*a&lt;&lt;endl;
+	```
+所以我们可以让p指向一个已经存在的数组：
+
+</code></pre>
+<pre><code>int (*p)[3];
+int q[3];
+p=&amp;q;
+cout&lt;&lt;&quot;q=&quot;&lt;&lt;q&lt;&lt;&quot; p=&quot;&lt;&lt;p&lt;&lt;endl;
+cout&lt;&lt;&quot;&amp;q=&quot;&lt;&lt;&amp;q&lt;&lt;&quot; *p=&quot;&lt;&lt;*p&lt;&lt;endl;  //all four are identical!
+
+(*p)[0]=44;
+q[0]=88;
+cout&lt;&lt;(*p)[0]&lt;&lt;endl;
+return 0;
+</code></pre>
+<pre><code>这里p和q值相同，但不能用
+p=q代替p=&amp;q. 我猜他们数据结构不同：q是int[], p是 &amp;(int[])
+
+单行写法就是
+</code></pre>
+<pre><code>int (*r)[3]=&amp;q;
+</code></pre>
+<pre><code>这里理解的要点是，这一行是定义r的，r是被定义的新对象，所以等号右边是r的取值。而不是辗转定义了一个新int或什么的。
+
+
+
+
+//问题：可以new一个东西出来让p取值吗？比如的	```p=new (int[3]);```
+//会出bug [Error] cannot convert 'int*' to 'int (*)[3]' in assignment)
+
+可以用类似的方法，通过定义数组的“头”指针来制造动态大小数组：
+</code></pre>
+<p>int n;<br>
+cin&gt;&gt;n;<br>
+int* p = new int [n];</p>
+<pre><code>
+比如你写的类涉及到不确定数量的顶点v：
+
+
+</code></pre>
+<p>class pt{<br>
+// something<br>
+};//comma after class definition<br>
+class obj{<br>
+int num;<br>
+pt  * v;<br>
+int** adj;<br>
+void init(int numOfVertices);<br>
+};</p>
+<p>void obj::init(int numOfVertices){<br>
+num=numOfVertices;<br>
+v=new pt[num];<br>
+adj=new  int*[3];<br>
+for(int i=0;i&lt;=2;i++){<br>
+adj[i]=new int[3];<br>
+}<br>
+}</p>
+<pre><code>
+
+ref:
+https://blog.csdn.net/qqyuanhao163/article/details/100769118
+int *p[4]; //定义一个指针数组，该数组中每个元素是一个指针，每个指针指向哪里就需要程序中后续再定义了。
+int (*p)[4]; //定义一个数组指针，该指针指向含4个元素的一维数组（数组中每个元素是int型）。
+
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/bao-bao-long-de-gu-shi/">
+              <h3 class="post-title">
+                抱抱龙的故事
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f22448a1547630167e9e',
+    clientSecret: '145116e2351b6d8cb5001b1097c936d0cd279fdc',
+    repo: 'kingsix-bravo.github.io',
+    owner: 'kingsix-bravo',
+    admin: ['kingsix-bravo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

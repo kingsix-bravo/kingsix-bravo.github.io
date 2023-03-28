@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kingsix-bravo.github.io</id>
+    <title>Axiom space</title>
+    <updated>2023-03-28T06:48:38.424Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kingsix-bravo.github.io"/>
+    <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
+    <subtitle>Combinatorial we stand, discrete we fall!</subtitle>
+    <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
+    <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, Axiom space</rights>
+    <entry>
+        <title type="html"><![CDATA[只是你我之间的事情]]></title>
+        <id>https://kingsix-bravo.github.io/post/zhi-shi-ni-wo-zhi-jian-de-shi-qing/</id>
+        <link href="https://kingsix-bravo.github.io/post/zhi-shi-ni-wo-zhi-jian-de-shi-qing/">
+        </link>
+        <updated>2023-03-28T06:21:24.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[chatGPT 和 不存在的洗手池台面]]></title>
+        <id>https://kingsix-bravo.github.io/post/chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/</id>
+        <link href="https://kingsix-bravo.github.io/post/chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/">
+        </link>
+        <updated>2023-03-27T14:36:57.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[run a simple HTTP server from clisp REPL]]></title>
+        <id>https://kingsix-bravo.github.io/post/run-a-simple-http-server-from-clisp-repl/</id>
+        <link href="https://kingsix-bravo.github.io/post/run-a-simple-http-server-from-clisp-repl/">
+        </link>
+        <updated>2023-03-26T16:31:14.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从源码编译dos下的tinyscheme]]></title>
+        <id>https://kingsix-bravo.github.io/post/cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/</id>
+        <link href="https://kingsix-bravo.github.io/post/cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/">
+        </link>
+        <updated>2023-03-23T15:47:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[haskell 的“愚蠢”]]></title>
+        <id>https://kingsix-bravo.github.io/post/haskell-de-yu-chun/</id>
+        <link href="https://kingsix-bravo.github.io/post/haskell-de-yu-chun/">
+        </link>
+        <updated>2023-03-19T17:47:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[c++的指针和类]]></title>
+        <id>https://kingsix-bravo.github.io/post/cde-zhi-zhen-he-lei/</id>
+        <link href="https://kingsix-bravo.github.io/post/cde-zhi-zhen-he-lei/">
+        </link>
+        <updated>2022-11-30T10:21:19.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[抱抱龙的故事]]></title>
+        <id>https://kingsix-bravo.github.io/post/bao-bao-long-de-gu-shi/</id>
+        <link href="https://kingsix-bravo.github.io/post/bao-bao-long-de-gu-shi/">
+        </link>
+        <updated>2022-11-30T08:46:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[gridea不能同步的问题]]></title>
+        <id>https://kingsix-bravo.github.io/post/gridea-bu-neng-tong-bu-de-wen-ti/</id>
+        <link href="https://kingsix-bravo.github.io/post/gridea-bu-neng-tong-bu-de-wen-ti/">
+        </link>
+        <updated>2022-09-13T07:43:49.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[（天大图书馆）云苔购上线了]]></title>
+        <id>https://kingsix-bravo.github.io/post/tian-da-tu-shu-guan-yun-tai-gou-shang-xian-liao/</id>
+        <link href="https://kingsix-bravo.github.io/post/tian-da-tu-shu-guan-yun-tai-gou-shang-xian-liao/">
+        </link>
+        <updated>2021-04-27T02:15:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[介绍奇怪的网站: Numericana.com]]></title>
+        <id>https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/</id>
+        <link href="https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/">
+        </link>
+        <updated>2020-10-18T15:35:34.000Z</updated>
+    </entry>
+</feed>

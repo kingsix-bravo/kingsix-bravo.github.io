@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>run a simple HTTP server from clisp REPL | Axiom space</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1679986111609">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1679986111609" alt="">
+  </a>
+  <h1 class="site-title">
+    Axiom space
+  </h1>
+  <p class="site-description">
+    Combinatorial we stand, discrete we fall!
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              run a simple HTTP server from clisp REPL
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2023-03-27 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>First you should have some sort of common lisp. I have GNU clisp 2.49 under win10.</p>
+<p>Then you should have quicklisp for getting packages. It is described in the following webpage:</p>
+<p>https://grishagin.com/lisp/windows10/2017/01/26/install-lisp-Windows10.html#:~:text=Install%20quicklisp.%20Place%20quicklisp.lisp%20into%20C%3Alisp%20Run%20CLISP,the%20following%3A%20%28load%20%22C%3A%2Flisp%2Fquicklisp.lisp%22%29%20%28quicklisp-quickstart%3Ainstall%20%3Apath%20%22C%3A%2Flisp%2Fquicklisp%2F%22%29%20%28ql%3Aadd-to-init-file%29</p>
+<p>Install quicklisp.<br>
+Place quicklisp.lisp into C:\lisp<br>
+Run CLISP and execute the following:<br>
+(load &quot;C:/lisp/quicklisp.lisp&quot;)<br>
+(quicklisp-quickstart:install :path &quot;C:/lisp/quicklisp/&quot;)<br>
+(ql:add-to-init-file)</p>
+<p>--</p>
+<p>Then i copied the following code into a &quot;site001.lisp&quot; file.</p>
+<p>`;;;; hello-world.lisp</p>
+<p>(ql:quickload &quot;restas&quot;)</p>
+<p>(restas:define-module #:hello-world<br>
+(:use :cl :restas))</p>
+<p>(in-package #:hello-world)</p>
+<p>(define-route hello-world (&quot;&quot;)<br>
+&quot;Hello World&quot;)</p>
+<p>(start '#:hello-world :port 8080)`</p>
+<p>In the end I ran (load &quot;site001.lisp&quot;). It started frantically download packages for a minute and everything froze afterwards. I waited  for a few minutes and realized that I have a helloworld page in my browser when I type localhost:8080.</p>
+<p>So that is it. Everything is fine except my workbench foler is totally messed up.</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/">
+              <h3 class="post-title">
+                从源码编译dos下的tinyscheme
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f22448a1547630167e9e',
+    clientSecret: '145116e2351b6d8cb5001b1097c936d0cd279fdc',
+    repo: 'kingsix-bravo.github.io',
+    owner: 'kingsix-bravo',
+    admin: ['kingsix-bravo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

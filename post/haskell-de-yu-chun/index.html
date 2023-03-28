@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>haskell 的“愚蠢” | Axiom space</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1679986111609">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1679986111609" alt="">
+  </a>
+  <h1 class="site-title">
+    Axiom space
+  </h1>
+  <p class="site-description">
+    Combinatorial we stand, discrete we fall!
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              haskell 的“愚蠢”
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2023-03-20 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>我曾经以为haskell是设计精良的语言，直到我开始学习它后一下子遇到一个让我半夜头皮抓破的问题。我本想赶快把它搞定就睡觉，但最终让我不得写下这件事情并宣布haskell 真的很傻。<br>
+这个问题的最简单的版本其实就是<br>
+length [1..9] / 1<br>
+或者<br>
+length [1..9] / log 9<br>
+会出错：no instane for (franctional int) arising from a use of '/'.</p>
+<p>我知道这涉及到整数没有fraction除法之类的问题。但9/1和9/log 9 就是可以的.你haskell真是无比贞洁，眼不容沙，就不要让我9/1.</p>
+<p>我搜索了一下，竟然没有找到解决办法。最后只好问了chatgpt。它一下子就告诉我：<br>
+length之外在套一个<code>fromIntegral</code>就好。</p>
+<p>除此之外它还提供了一些似是而非的教学，涉及比fractional 更大的floating type。我并不信服。不过还是很感谢它解决了问题。</p>
+<p>另外不得不吐槽一下<code>fromIntegral</code>这个函数。我以往遇到的类型转换都是toSomeType. 这货却只指定原有的类型，目标不定。一个东西的原来的类型还不是总是确定的吗，那这就相当于随心所欲，放飞自我了。<br>
+干脆把所有可能的fromSomething合在一起写成一个AlternativeIdentity函数。但haskell不会允许你这样做的——那样就丧失了用类型编程折磨人的前提。（当然我们私下也同意，程序不应该悄悄滴就改了数据类型。）</p>
+<p>--</p>
+<p>冷静下来后不妨再看看这个问题。我们期望的sqrt应该是一个R+ -&gt;R+的函数。虽然计算机对int的实现与对float的实现是完全不同的，但从道理上来说int是float的子集，所有能对float做的事情也应该能对int做。换句话说，这两者不应该是完全独立的两个type，而应该是包含关系。一个函数能接受 float参数而不能接受int参数是不能接受的。</p>
+<p>如果在c++中，应该用函数模板等设计成polymorphic的。在haskell中呢？是否僵硬的类型系统是无法绕过的？</p>
+<p>--</p>
+<p>added on 2023年3月27日</p>
+<p>这可以算是baaden-meinhoff complex的极好的例子了。我今天居然看到一个完全一样的c++的例子：</p>
+<pre><code>`long i = 0；
+
+double j = sqrt(i);
+
+上面的两行代码在VC 6.0不会出现编译错误（可能出现一个编译警告），但在VS 2005中会出现使用sqrt函数不明确的错误，为了避免出现这个错误，你最好这样写：
+
+long i = 0;
+
+double j = sqrt(static_cast&lt;double&gt;(i));
+`
+</code></pre>
+<p>ref:<br>
+从VC 6.0移植代码到VS C++ 2005得出的一些经验<br>
+作者：朱金灿<br>
+来源：http://www.cnblogs.com/clever101</p>
+<p>可能是我太习惯python,QuickBasic等的隐式转换了。其实在c系列中的sqrt也没有这么严格的类型检查的。比如DJGPP编译运行：</p>
+<pre><code>#include&lt;math.h&gt;
+...
+int a=3;
+printf(&quot;%5f&quot;, sqrt(a));
+</code></pre>
+<p>就毫无问题。这里math.h中的声明为<br>
+double sqrt(double _x);</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/cde-zhi-zhen-he-lei/">
+              <h3 class="post-title">
+                c++的指针和类
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f22448a1547630167e9e',
+    clientSecret: '145116e2351b6d8cb5001b1097c936d0cd279fdc',
+    repo: 'kingsix-bravo.github.io',
+    owner: 'kingsix-bravo',
+    admin: ['kingsix-bravo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

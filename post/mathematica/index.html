@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>mathematica  | Axiom space</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1679986111609">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1679986111609" alt="">
+  </a>
+  <h1 class="site-title">
+    Axiom space
+  </h1>
+  <p class="site-description">
+    Combinatorial we stand, discrete we fall!
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              mathematica 
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-07-19 ·
+              </time>
+              
+                <a href="https://kingsix-bravo.github.io/tag/mathematica/" class="post-tag">
+                  # mathematica
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>##指定 list 元素</p>
+<pre><code>In[2]:= {{1.2, 3.4}, {5.6, 7.8}}[[2, 2]]
+
+Out[2]= 7.8
+
+In[1]:= {{3, 4}, {5, 6}}[[2]][[2]]
+
+Out[1]= 6
+
+In[9]:= a = {9, 8, 7, 6, 5};
+a[[{3, 4}]]
+
+Out[10]= {7, 6}
+
+In[12]:= Range[11, 20][[Range[4, 5]]]
+
+Out[12]= {14, 15}
+
+</code></pre>
+<hr>
+<h2 id="module">Module</h2>
+<p>to define a module by</p>
+<p>Module[{list of local variables}, things to do]</p>
+<pre><code>In[75]:= F[n_] := 
+  Module[{tempsum}, tempsum = 0; Do[tempsum = tempsum + i, {i, 1, n}];
+    tempsum];
+Table[F[n], {n, 1, 10}]
+
+Out[76]= {1, 3, 6, 10, 15, 21, 28, 36, 45, 55}
+</code></pre>
+<h2 id="do-loop">Do loop</h2>
+<pre><code>s=0;
+Do[s = s + 1; Print[i, &quot; &quot;, s], {i, 1, 10}]
+</code></pre>
+<p>Or simply，to repeat 10 times,</p>
+<pre><code>s=0;
+Do[s=s+1;Print[s], 10]
+</code></pre>
+<p>Or loop through a list:</p>
+<pre><code>s=0;
+Do[s=s+i;Print[i,&quot; &quot;,s], {i,{1,5,6,2}}]
+</code></pre>
+<hr>
+<p>如何批量去掉表格如<br>
+{yy -&gt; 8.90323265887200425958769930845,<br>
+yy -&gt; 8.90323265943529241591021289811,<br>
+yy -&gt; 8.90323265800195651367281533850}中的右箭头？谢谢！<br>
+追答<br>
+“-&gt;”是Mathematica里最重要指令之一Rule的简写……要“去掉”的话，可以：<br>
+yy /. List/@{yy -&gt; 8.90323265887200425958769930845,<br>
+yy -&gt; 8.90323265943529241591021289811,<br>
+yy -&gt; 8.90323265800195651367281533850}</p>
+<p><strong>道理：</strong></p>
+<pre><code>In[111]:= x /. x -&gt; 3
+Out[111]= 3
+
+In[112]:= x /. {x -&gt; 3}
+Out[112]= 3
+
+In[81]:= x /. {{x -&gt; 3}}
+
+Out[81]= {3}
+
+In[113]:= x /. {{{x -&gt; 3}}}
+Out[113]= {{3}}
+
+
+In[115]:= res = N[Solve[x^7 + x + 1 == 0, x]]
+Out[115]= {{x -&gt; -0.796544}, {x -&gt; -0.705298 - 
+    0.637624 I}, {x -&gt; -0.705298 + 0.637624 I}, {x -&gt; 
+   0.123762 - 1.05665 I}, {x -&gt; 0.123762 + 1.05665 I}, {x -&gt; 
+   0.979808 - 0.516677 I}, {x -&gt; 0.979808 + 0.516677 I}}
+
+In[116]:= x /. res
+Out[116]= {-0.796544, -0.705298 - 0.637624 I, -0.705298 + 0.637624 I, 
+ 0.123762 - 1.05665 I, 0.123762 + 1.05665 I, 0.979808 - 0.516677 I, 
+ 0.979808 + 0.516677 I}
+
+In[117]:= x /. Flatten[res]
+Out[117]= -0.796544
+</code></pre>
+<hr>
+<p>Expand: 不能进入子表达式。 尝试ExpandAll ！</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/end-of-castle-s02/">
+              <h3 class="post-title">
+                End of Castle, s02
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f22448a1547630167e9e',
+    clientSecret: '145116e2351b6d8cb5001b1097c936d0cd279fdc',
+    repo: 'kingsix-bravo.github.io',
+    owner: 'kingsix-bravo',
+    admin: ['kingsix-bravo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

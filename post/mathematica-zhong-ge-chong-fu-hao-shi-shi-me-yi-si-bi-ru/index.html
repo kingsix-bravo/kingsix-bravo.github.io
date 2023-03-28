@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>mathematica中各种符号是什么意思，比如@ , /, @@@  | Axiom space</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1679986111609">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1679986111609" alt="">
+  </a>
+  <h1 class="site-title">
+    Axiom space
+  </h1>
+  <p class="site-description">
+    Combinatorial we stand, discrete we fall!
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              mathematica中各种符号是什么意思，比如@ , /, @@@ 
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-07-16 ·
+              </time>
+              
+                <a href="https://kingsix-bravo.github.io/tag/mathematica/" class="post-tag">
+                  # mathematica
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>@是前缀，<br>
+Prefix[f[expr]]<br>
+以缺省形式 f@expr 输出给定的 f[expr].<br>
+Prefix[f[expr],h]<br>
+输出为 hexpr.</p>
+<hr>
+<p>@@是APPLY<br>
+Apply (@@)(应用)	[SpanFromLeft]<br>
+Apply[f,expr]<br>
+或 f@@expr 用 f 替换 expr 的头部.<br>
+Apply[f,expr,{1}]<br>
+或 f@@@expr 用 f 替换 expr 的第 1 层的头部.<br>
+Apply[f,expr,levelspec]<br>
+替换 expr 中使用 levelspec 指定的部分的头部.<br>
+Apply[f]<br>
+表示 Apply 的运算符形式，它可以应用于表达式.</p>
+<pre><code>In[1]:= Apply[f, {a, b, c, d}]
+
+Out[1]= f[a, b, c, d]
+
+In[2]:= f @@ {a, b, c, d}
+
+Out[2]= f[a, b, c, d]
+
+In[3]:= Plus @@ {a, b, c, d}
+
+Out[3]= a + b + c + d
+</code></pre>
+<hr>
+<p>@@@</p>
+<p>Apply[f,expr]<br>
+或 f@@expr 用 f 替换 expr 的头部.<br>
+Apply[f,expr,{1}]<br>
+或 f@@@expr 用 f 替换 expr 的第 1 层的头部.</p>
+<hr>
+<p>expr /. rules表示应用一个规则或规则列表尽可能转换一个表达式 expr 的每个子部分,例如<br>
+{x, x^2, y, z} /. x -&gt; a 就可以把列表中的x全部替换成a了<br>
+再如{a, b, c} /. List -&gt; f 结构的头部就从List换成f了,变成f[a,b,c]</p>
+<hr>
+<p>//表示在表达示的结尾进行下一个运算。<br>
+比如list={1,2}<br>
+list//Total就是在结尾进行求和运算，<br>
+如果不用//就Total@@list，则Total函数在前面计算，</p>
+<hr>
+<p>#&amp;</p>
+<p>将一个带有若干个参数的函数转化为带有一个参数列表的函数：</p>
+<pre><code>In[1]:= cplus = Plus @@ # &amp;
+
+Out[1]= Plus @@ #1 &amp;
+
+In[2]:= cplus[{a, b, c}]
+
+Out[2]= a + b + c
+</code></pre>
+<hr>
+<p>函数式编程</p>
+<p>函数式编程是 Wolfram 语言的高度发展和深度集成的核心功能，在该语言的符号功能下变得越来越丰富，越来越方便. 将表达式 f[x] 同时视为符号数据和 f 函数的应用，这提供了集成结构和函数的独一无二的方式[LongDash][LongDash]许多普通计算的高效简洁的表示方式.</p>
+<p>Function (&amp;) [LongDash] 指定一个纯函数 (例如： (#+1)&amp;)</p>
+<p>#, ##, #name [LongDash] 纯函数中变量的插符</p>
+<p>函数作用于列表 »</p>
+<p>Map (/@) [LongDash] 作用于列表： f/@{x,y,z}[LongRightArrow]{f[x],f[y],f[z]}</p>
+<p>Apply (@@, @@@) [LongDash] 应用于一个列表： f@@{x,y,z}[LongRightArrow]f[x,y,z]</p>
+<p>MapIndexed [LongDash] 附带索引信息的映射： {f[x,{1}],f[y,{2}],f[z,{3}]}</p>
+<p>MapThread [MediumSpace][FilledVerySmallSquare][MediumSpace] MapAt [MediumSpace][FilledVerySmallSquare][MediumSpace] MapAll [MediumSpace][FilledVerySmallSquare][MediumSpace] Scan [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+<p>函数迭代 »</p>
+<p>Nest, NestList, NestGraph [LongDash] 嵌套一个函数: f[f[f[x]]] 等</p>
+<p>Fold, FoldList [LongDash] 链表折叠： f[f[f[x,1],2],3] 等</p>
+<p>SequenceFold [MediumSpace][FilledVerySmallSquare][MediumSpace] SequenceFoldList [MediumSpace][FilledVerySmallSquare][MediumSpace] FoldPair [MediumSpace][FilledVerySmallSquare][MediumSpace] FoldPairList</p>
+<p>FixedPoint, FixedPointList [LongDash] 重复嵌套直到一个固定点</p>
+<p>NestWhile [MediumSpace][FilledVerySmallSquare][MediumSpace] NestWhileList [MediumSpace][FilledVerySmallSquare][MediumSpace] TakeWhile [MediumSpace][FilledVerySmallSquare][MediumSpace] LengthWhile [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+<p>面向列表的函数 »</p>
+<p>Select [LongDash] 根据一个函数从列表中选择</p>
+<p>Array [LongDash] 从一个函数中创建一个数组</p>
+<p>SortBy [MediumSpace][FilledVerySmallSquare][MediumSpace] MaximalBy [MediumSpace][FilledVerySmallSquare][MediumSpace] SplitBy [MediumSpace][FilledVerySmallSquare][MediumSpace] GatherBy [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+<p>面向关联的函数</p>
+<p>AssociationMap [LongDash] 根据一个函数创建一个关联</p>
+<p>KeySortBy [MediumSpace][FilledVerySmallSquare][MediumSpace] CountsBy [MediumSpace][FilledVerySmallSquare][MediumSpace] GroupBy [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+<p>函数复合</p>
+<p>Identity [MediumSpace][FilledVerySmallSquare][MediumSpace] Composition [MediumSpace][FilledVerySmallSquare][MediumSpace] Operate [MediumSpace][FilledVerySmallSquare][MediumSpace] Through [MediumSpace][FilledVerySmallSquare][MediumSpace] Distribute [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+<p>条件操作符格式 »</p>
+<p>Curry [MediumSpace][FilledVerySmallSquare][MediumSpace] Select [MediumSpace][FilledVerySmallSquare][MediumSpace] Cases [MediumSpace][FilledVerySmallSquare][MediumSpace] Append [MediumSpace][FilledVerySmallSquare][MediumSpace] Map [MediumSpace][FilledVerySmallSquare][MediumSpace] Position [MediumSpace][FilledVerySmallSquare][MediumSpace] ...</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/eulerian-matrix-of-size-6/">
+              <h3 class="post-title">
+                Eulerian matrix of size 6
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f22448a1547630167e9e',
+    clientSecret: '145116e2351b6d8cb5001b1097c936d0cd279fdc',
+    repo: 'kingsix-bravo.github.io',
+    owner: 'kingsix-bravo',
+    admin: ['kingsix-bravo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
