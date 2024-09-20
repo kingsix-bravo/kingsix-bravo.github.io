@@ -1,63 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
-    <title>Axiom space</title>
-    <updated>2023-03-28T06:48:38.424Z</updated>
+    <title>Gridea</title>
+    <updated>2024-09-20T08:20:02.831Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
-    <subtitle>Combinatorial we stand, discrete we fall!</subtitle>
+    <subtitle>温故而知新</subtitle>
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2023, Axiom space</rights>
+    <rights>All rights reserved 2024, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[只是你我之间的事情]]></title>
-        <id>https://kingsix-bravo.github.io/post/zhi-shi-ni-wo-zhi-jian-de-shi-qing/</id>
-        <link href="https://kingsix-bravo.github.io/post/zhi-shi-ni-wo-zhi-jian-de-shi-qing/">
+        <title type="html"><![CDATA[NEW ERA！]]></title>
+        <id>https://kingsix-bravo.github.io/post/new-era/</id>
+        <link href="https://kingsix-bravo.github.io/post/new-era/">
         </link>
-        <updated>2023-03-28T06:21:24.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[chatGPT 和 不存在的洗手池台面]]></title>
-        <id>https://kingsix-bravo.github.io/post/chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/</id>
-        <link href="https://kingsix-bravo.github.io/post/chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/">
-        </link>
-        <updated>2023-03-27T14:36:57.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[run a simple HTTP server from clisp REPL]]></title>
-        <id>https://kingsix-bravo.github.io/post/run-a-simple-http-server-from-clisp-repl/</id>
-        <link href="https://kingsix-bravo.github.io/post/run-a-simple-http-server-from-clisp-repl/">
-        </link>
-        <updated>2023-03-26T16:31:14.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[从源码编译dos下的tinyscheme]]></title>
-        <id>https://kingsix-bravo.github.io/post/cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/</id>
-        <link href="https://kingsix-bravo.github.io/post/cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/">
-        </link>
-        <updated>2023-03-23T15:47:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[haskell 的“愚蠢”]]></title>
-        <id>https://kingsix-bravo.github.io/post/haskell-de-yu-chun/</id>
-        <link href="https://kingsix-bravo.github.io/post/haskell-de-yu-chun/">
-        </link>
-        <updated>2023-03-19T17:47:07.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[c++的指针和类]]></title>
-        <id>https://kingsix-bravo.github.io/post/cde-zhi-zhen-he-lei/</id>
-        <link href="https://kingsix-bravo.github.io/post/cde-zhi-zhen-he-lei/">
-        </link>
-        <updated>2022-11-30T10:21:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[抱抱龙的故事]]></title>
-        <id>https://kingsix-bravo.github.io/post/bao-bao-long-de-gu-shi/</id>
-        <link href="https://kingsix-bravo.github.io/post/bao-bao-long-de-gu-shi/">
-        </link>
-        <updated>2022-11-30T08:46:21.000Z</updated>
+        <updated>2024-09-20T07:50:26.000Z</updated>
+        <content type="html"><![CDATA[<p>I don't know about you guys, but I am writing a lot of ''functional-style'' programming! And I have forgotten almost all of the lisp and perl that I once learned!</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[gridea不能同步的问题]]></title>
@@ -65,6 +25,19 @@
         <link href="https://kingsix-bravo.github.io/post/gridea-bu-neng-tong-bu-de-wen-ti/">
         </link>
         <updated>2022-09-13T07:43:49.000Z</updated>
+        <content type="html"><![CDATA[<p>找出落灰许久的gridea，同步始终不成功。在控制台找到错误信息，是etimeout。</p>
+<p>我ping了一下对应的地址（142.250.181.238:443，确实是github的地址），ping不通。这很奇怪，因为我直接用浏览器可以上github。我猜想可能是GFW的问题，就费老鼻子劲把windows上的_风写_又装上了(<code>https://assets.totallyacdn.com/desktop/win/Windscribe_2.4.exe</code>)。可是问题依旧。更新到0.9.3版本，没有效果。</p>
+<p>后来发现问题竟然是:<strong>Github令牌已经过期了？？`</strong></p>
+<p>重新申请一个（无限期）令牌就好了。</p>
+<hr>
+<p>申请的地方挺难找的：</p>
+<p>在Github官网任何页面的右上角，点击你的个人资料照片，然后点击 Settings（设置）</p>
+<p>在左侧边栏中，点击 Developer settings</p>
+<p>在左侧边栏中，点击 Personal access tokens（个人访问令牌）</p>
+<p>点击 Generate new token（生成新令牌）</p>
+<p>Note：</p>
+<p>选择要授予此令牌的作用域或权限。 要使用令牌从命令行访问仓库，请选择 repo（仓库）</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[（天大图书馆）云苔购上线了]]></title>
@@ -72,6 +45,13 @@
         <link href="https://kingsix-bravo.github.io/post/tian-da-tu-shu-guan-yun-tai-gou-shang-xian-liao/">
         </link>
         <updated>2021-04-27T02:15:23.000Z</updated>
+        <content type="html"><![CDATA[<p>大概一周前听说的云苔购服务，即读者自己线上下单购书，图书馆经费买单，看完后还给图书馆即可。</p>
+<p>相比于传统的向图书馆推荐图书的流程，省去了官方购书、加标签编制索引等过程（一般要三个月，快的话）。</p>
+<p>而且不占用在图书馆借书的额度～</p>
+<p>现在天大可以一次线上买3本，一年共10本，快递到货10天后数30天就得还书，不能续借。</p>
+<p>买书的种类是有限制的，而且强制是10年内出版的新书，价格也只能在300元内。</p>
+<p>我已经搞了一本《星髓》，下单后差不多三天收到吧～～</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[介绍奇怪的网站: Numericana.com]]></title>
@@ -79,5 +59,137 @@
         <link href="https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/">
         </link>
         <updated>2020-10-18T15:35:34.000Z</updated>
+        <content type="html"><![CDATA[<p>我一开始是在搜索西姆松线时找到它的：<br>
+http://www.numericana.com/answer/geometry.htm#centrarc<br>
+后来发现除了几何学，这个网站还有很多奇怪的东西：<br>
+比如椭球体表面积<br>
+http://www.numericana.com/answer/ellipsoid.htm</p>
+<p>各种符号的意义和历史：<br>
+http://www.numericana.com/answer/symbol.htm</p>
+<p>电路基础：<br>
+http://www.numericana.com/answer/electronics.htm</p>
+<p>红外线在自动拍照上的应用，很多技术细节：<br>
+http://www.numericana.com/answer/ir.htm#camera</p>
+<p>虽然这些冷知识对我没有什么实际的用处，但谁是为了实际使用才学习电路的呢（误）</p>
+<hr>
+<p>I also posted this post on write.as: https://write.as/kingsixbravo/jie-shao-qi-guai-de-wang-zhan-numericana-com</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[testest]]></title>
+        <id>https://kingsix-bravo.github.io/post/testest/</id>
+        <link href="https://kingsix-bravo.github.io/post/testest/">
+        </link>
+        <updated>2020-06-15T08:36:28.000Z</updated>
+        <content type="html"><![CDATA[<p>testtest</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[hotness ]]></title>
+        <id>https://kingsix-bravo.github.io/post/hotness/</id>
+        <link href="https://kingsix-bravo.github.io/post/hotness/">
+        </link>
+        <updated>2020-06-15T07:47:25.000Z</updated>
+        <content type="html"><![CDATA[<p>现在天真热！</p>
+<p>冰箱里拿出来的西瓜，一会也就热了起来。</p>
+<p>笔记本电脑都是烫的。</p>
+<p>这种时候聒噪的家人就格外不能忍了。</p>
+<p>亲爱的，你开空调了吗？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[qtranslate steals Ctrl+e shortcut]]></title>
+        <id>https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/</id>
+        <link href="https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/">
+        </link>
+        <updated>2020-04-21T06:39:37.000Z</updated>
+        <content type="html"><![CDATA[<p>potplayer mini has a shortcut Ctrl+e for capturing screen image and saving it instantly.</p>
+<p>However it often works nicht well. I guess someone has stolen the priority for this short cut.</p>
+<p>After some trials I figured out that it was qTranslate, surprise.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[win英文输入法作为默认输入法]]></title>
+        <id>https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/</id>
+        <link href="https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/">
+        </link>
+        <updated>2020-04-17T00:51:34.000Z</updated>
+        <content type="html"><![CDATA[<p>#win英文输入法作为默认输入法</p>
+<p>方法1:已失败</p>
+<p>修改注册表，。。。后来不知怎么又设置了一下输入法就丧失效果了。</p>
+<p>方法2:</p>
+<p>将小狼毫改造成英文输入法。</p>
+<p>最好的办法当然是搞一个输入方案，只输英文，但我还没搞清怎么办。目前临时将小狼毫默认为英文输入，参考：</p>
+<p>【ref】https://www.jianshu.com/p/7eb4a2ac0b69</p>
+<p>摘要：默认情况下，Rime 使用“朙月拼音”，对应的配置文件为 luna_pinyin.schema.yaml。如果想将它设置为默认输入英文，则将该文件中switches-&gt;ascii_mode-&gt;reset的值修改为1即可：</p>
+<p>当然你可以直接修改yaml文件，或者增加如下的.custom文件：</p>
+<pre><code>patch:
+	switches/ascii_mode:
+		reset:1
+</code></pre>
+<p>保存成</p>
+<blockquote>
+<p>C:\Users\king18\AppData\Roaming\Rime\build\luna_pinyin.schema.custom</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[one-liner] process explorer棒极了]]></title>
+        <id>https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/</id>
+        <link href="https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/">
+        </link>
+        <updated>2020-03-31T02:48:08.000Z</updated>
+        <content type="html"><![CDATA[<p>win10自带的任务管理器真糟糕。</p>
+<p>我愣是找不到offline explorer在哪里</p>
+<p>后来用procexp发现挂靠在everything下面了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[书和阅读的问题]]></title>
+        <id>https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/</id>
+        <link href="https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/">
+        </link>
+        <updated>2020-02-22T16:49:59.000Z</updated>
+        <content type="html"><![CDATA[<p>书和阅读的问题</p>
+<p>刚刚翻看了《如何阅读一本书》，让我一肚子窝火。</p>
+<p><strong>什么是书？</strong></p>
+<p>广义来说书是有一定篇幅的大规模印刷品。<em>Wild things</em> 也是书，但无法套用到作者的体系中。</p>
+<p>也许作者关心的仅仅是文本形成的流。所以他才会特别关心“从血肉中抽出骨架”。</p>
+<p><strong>这种书的问题：</strong></p>
+<p>人的思维本质上不是线性的。口头语言才是线性的。书籍也不是线性的。</p>
+<p>文本流的书籍是典型的口头语言的结晶。你坐在火堆旁听巫师将过去的故事，跟端着书一页一页地看，本质上没有区别。</p>
+<p>听完了巫师的故事才算完——这时候你才能对故事做出自己的评价。你无法要求他为你抽象出故事的脉络、总结出故事的主旨，更无法让他帮你内化为智慧。要是打断他，也许酋长会把你杀头，族人会愤怒敲骨棒，甚至可能让巫师忘记自己讲到哪里而不得不重头开始。这是线性的语言。</p>
+<p>也许后来萌芽状态的印刷术就是在试图将口头讲述的故事实体化。一个可以反复播放、暂停的故事。</p>
+<p>不知什么时候出现了章节的概念（也许是卷？）。太长的文本，不妨按照逻辑分成若干卷竹简，而非刻完一卷竹子再接到下一卷？章节的本质是将大块的文本化分成小块的、内部联系紧密、互相之间有松散联系和分野的文本块。章节的重要性在于允许你在文本的中间跳跃。每隔三页看几段只能算是skipping。每章标题题记看一遍，你已经了解了本书的脉络。章的内部可以再化分成节。有些给力的数学书还分成段，每一段都有标记，互相引用，一段只有一个主要（数学）结果。这几乎是结构化文本的巅峰。</p>
+<p><strong>每一本书都应该</strong></p>
+<p>理论上每一本书都应该写成树状：根节点是书名，meta data，前言，等等。</p>
+<p>下面的子节点是章的题记，再下面的子节点是节的题记，再下面是论述的几个观点，再下面是观点的假设，推理，讨论，引用到本书或其他书的小节的超链接。</p>
+<p>这样的一本书不需要你“从血肉中抽出骨架”，逻辑结构（or lack of）是清晰易见的，抄书的人可以轻松地抄下自己感兴趣的部分，看书的人也可以跳来跳去。但问题是树状的书压入二位的纸张上，就会变形。</p>
+<p><strong>kindle的问题</strong></p>
+<p>kindle是对付文本流的利器。一页页地看下去，毫无问题。要在章节之间反复横跳，也没问题——如果电子书出版商标记了章节起点的话。关键字和索引之间也有链接。</p>
+<p>但真的想仔细研读文本细节，在前后页之间穿梭，并不容易。原因是在文本流中快进快退有本质困难——你无法用几个按钮精确定位你的目的地。如果是纸质书，你可以用五个指头当书签，可以凭精细的触觉翻到想去的书页。</p>
+<p><strong>读书的目的</strong></p>
+<p>读书的目的是获取快乐、知识和智慧。</p>
+<p>获取快乐的阅读是你主动、如饥似渴地阅读，不需讨论。</p>
+<p>获取知识的阅读需要你细读并加以推理、思考、记忆。</p>
+<p>获取智慧是否需要你自觉地抽象、总结？我个人认为智慧更在于你吞咽了大量知识后留下的印像。就像你与一个有见识的老友交谈后的那样。</p>
+<p><strong>我个人读《胡椒的故事》的经验：</strong></p>
+<p>读完后的主要印象：</p>
+<p>胡椒贸易是改变近代史的重大事件。贸易量大，联系了东西方，改变了多地的经济格局，甚至影响国家政治和政权变迁。</p>
+<p>开始的早，延续时间长。胡椒占主体，其他香料贸易为辅。东南亚和印度主导生产，欧洲人主导贸易。欧洲人会通过远航、办事处、建立军事基地来进行贸易。</p>
+<p>这里没有一个大不了的观点，也没有提出惊世骇俗的假说。但书中的诸多不可能被记忆的实例、琐事和统计数据加深了我的印象，这些印象是最终可以留在脑中的。如果这不算智慧，那就算了吧。</p>
+<p><strong>《如何阅读一本书》的问题：</strong></p>
+<p>现在我们已经难以想象作者针对的是哪些书了。国富论，小逻辑，圆锥曲线论？</p>
+<p>一本书的观点基本不需要费力抽象出来。基本观点是很明显的。理解，体会，真正相信它才是问题。</p>
+<p>如果连明确的观点都要我自己提取，这本书都在罗里罗嗦写什么？至少从这一点上说《如何阅读一本书》是合格的：你要在阅读时积极思考下述问题，发掘下列信息（附具体细则）。但它未能让人信服地证明为什么我们要这样做。</p>
+<ul>
+<li>阅读完一本书才能反驳作者吗？</li>
+<li>我们应该仔细体会琢磨作者用的词汇是什么意思，还是应该用我们自己心里既定的意义来否定作者？（按照《如何》，如果一本书写到“狗善于爬树捕鸟喵喵叫”，你应该仔细领会‘狗’其实是你称之为猫的动物。）推论：不给出明确定义的作者都在耍流氓。</li>
+<li>为什么要费力为图书分类，而不是看分类号？（对于现代读者，图书分类是潜意识就可以完成的事情。唯一的例外是某清华图书馆员把《太空电梯》分到了I712.45。）</li>
+</ul>
+<p>其实文艺复兴之前大部分书的观点都是错误的，或者至少是无法论证的。</p>
+<p>如果一本书竟然可以提出一个明确的观点并论证之，那就是在成为一本好书的路上迈出了一大步。</p>
+<p>按照《如何阅读一本书》自己的分类，《如何阅读一本书》是一本实用性的手册书。但它指导我们走上一条让人犹豫的道路，通往一个让我们不情愿到达的目的地。恐怕难以找到第二本手册书让读者如此难以苟同其给出的指导意见。</p>
+]]></content>
     </entry>
 </feed>
