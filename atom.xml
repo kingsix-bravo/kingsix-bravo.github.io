@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsix-bravo.github.io</id>
     <title>Gridea</title>
-    <updated>2024-09-20T08:20:02.831Z</updated>
+    <updated>2024-09-22T12:52:01.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsix-bravo.github.io"/>
     <link rel="self" href="https://kingsix-bravo.github.io/atom.xml"/>
@@ -10,6 +10,450 @@
     <logo>https://kingsix-bravo.github.io/images/avatar.png</logo>
     <icon>https://kingsix-bravo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[repost 只是你我之间的事情]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-zhi-shi-ni-wo-zhi-jian-de-shi-qing/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-zhi-shi-ni-wo-zhi-jian-de-shi-qing/">
+        </link>
+        <updated>2024-09-22T12:50:30.000Z</updated>
+        <content type="html"><![CDATA[<p>只是你我之间的事情<br>
+· 2023-03-28 ·<br>
+我一直有这样一种模糊的感觉：计算机程序是我和计算机之间的事情。计算机不应该把它暴露给“用户”。具体而言，一个程序写成什么样子，用什么变量名，用loop 循环还是for循环，不应该被用户感知到。</p>
+<p>或者说，用户可以感知到的应该是编译之后得到的东西。</p>
+<p>但今天我突然发现不是这样。比如在haskell中自己定义数据类型</p>
+<p>data complexnumber = complexnumber { realPart :: Float, imaginarypart ::Float }</p>
+<p>let a =　cmplexnumber { realpart = 1, imaginarypart = 1 }</p>
+<p>putStrLn $ show a<br>
+*Main&gt; a<br>
+ｃomplexnumber {realPart = 1.0, imaginarypart = 10.0}<br>
+好吧， 这算是什么事情呢？ complexnumber这个东西，这个token，到底是数据还是代码呢？</p>
+<p>按照我从quickbasic到c++到python的理解，能显示在屏幕上的东西无非是：数，字符串，系统信息。后者我我无法控制，只能接受。前两者都是确定的（存在于计算机内存中）的东西，是程序生成的。</p>
+<p>其实早期的计算机似乎对与打印这件事是非常谨慎的。比如你可以在pascal中搞一个enum类型，列出monday tuesday 直到sunday，但这些fancy的名字不会让你打印到屏幕上。再比如早起的c++打印true false都打成0和1，而非字符串。这里怎么就开开心心打出一个complexnumber了呢？我可从来没有构造过这样一个字符串呀。</p>
+<p>这里的complexnumber本质上是一个函数：它生成一个complexnumber对象，不是吗。<br>
+*Main&gt; :t Complexnumber<br>
+Complexnumber :: Float -&gt; Float -&gt; Complexnumber<br>
+在计算机内部，这个词背后应该通过一个token列表对应到一个函数对象的地址。。。在此之后就没有complexnumber这个词的事情了。</p>
+<p>也许这个例子不好，那么<br>
+data shapes = circle Float | rectangle Float Float<br>
+这里的circle就明显是一个函数了，也可以<br>
+:t circle<br>
+之。但circle生成的其实是一个“字面意义”上的对象，你show它就得到一个circle 3.3这样的结果。也就是说，show的过程把计算机代码暴露出来了。代码和数据的泾渭分明的边界被打破了。这是以前从来没有过的。</p>
+<p>不要觉得这是REPL，系统在和程序员打交道。编译之后依然这样。</p>
+<p>C:\workbench\haskell&gt;ghc --make t.hs<br>
+[1 of 1] Compiling Main             ( t.hs, t.o )<br>
+Linking t.exe ...<br>
+C:\workbench\haskell&gt;t.exe<br>
+Complexnumber {realPart = 3.0, imaginaryPart = 99.0}<br>
+也就是说，这里程序的代码（函数名）在编译之后不但不受改变，还原样出现在输出结果中。这与我之前所想的”换个函数名编译之后还是不变“的想法完全相悖。</p>
+<p>这种情况其实我以前也见过，比如lisp中你搞一个symbol, 名字叫做dog，然后print它：<br>
+(print 'dog)<br>
+结果就是赤裸裸的大写DOG。那么dog符号到底是什么呢？它就是个符号。没有value与之bind。如果你去掉瞥号，那就会报错：variable DOG has no value.</p>
+<p>但lisp毕竟是lisp，我们不能用常理要求它。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost chatGPT 和 不存在的洗手池台面]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-chatgpt-he-bu-cun-zai-de-xi-shou-chi-tai-mian/">
+        </link>
+        <updated>2024-09-22T12:50:02.000Z</updated>
+        <content type="html"><![CDATA[<p>chatGPT 和 不存在的洗手池台面<br>
+· 2023-03-27 ·<br>
+我有时候会让chatGPT解释一些数学，物理和编程的概念或历史事实，有时候会让它推荐参考文献。但今天我想起很久以前看过的一篇短篇小说，后来一直找不到了。也许chatGPT能帮我呢？</p>
+<p>下面ME的部分是我说的：</p>
+<p>ME:<br>
+There' s a short story, probably by John Updike, concerning a prosititute who thinks the surface of the hotel sink is too dirty for placing a condom. What's the story?</p>
+<p>chatGPT:<br>
+The story you are referring to is &quot;The Lovely Troubled Daughters of Our Old Crowd&quot; by John Updike, first published in The New Yorker in 1982.</p>
+<p>In the story, a group of men in their forties who used to hang out together in their younger days reunite in a hotel room for a bachelor party. One of the men, Bech, hires a prostitute named Sandra to join them. When Bech and Sandra go into the bathroom to have sex, Sandra notices that the surface of the sink is dirty and refuses to place the condom on it. She insists that Bech clean it with a towel first.</p>
+<p>The incident highlights the contrast between the glamorous image of prostitution and the reality of the work. Sandra's concern about hygiene also serves as a commentary on the dangers of sexually transmitted infections, and the importance of safe sex practices.</p>
+<p>我搜了下，new yorker的过刊好像不容易访问。</p>
+<p>ME:<br>
+what collection of short stories does this story appera in?</p>
+<p>chatGPT:<br>
+&quot;The Lovely Troubled Daughters of Our Old Crowd&quot; is part of a collection of John Updike's short stories called &quot;Trust Me: Short Stories&quot; which was published in 1987.</p>
+<p>我在zlib下载了这本书。</p>
+<p>ME:<br>
+I can't find the exact spot where you're refering to. Can you point me to the paragraph about the surface of the sink being too dirty?</p>
+<p>chatGPT:<br>
+Certainly! Here's the paragraph from &quot;The Lovely Troubled Daughters of Our Old Crowd&quot; where Sandra refuses to place the condom on the hotel sink because she thinks it's too dirty:</p>
+<p>&quot;Bech took her by the arm and led her into the tiled bathroom. The fluorescent light in there was merciless, bringing out the yellow in her skin, the shadows in her eyes. The water in the sink was a little brown. When she saw this she refused to place the foil on the enamel, asking for a towel. Bech's host had left washcloths as thin and stiff as paper napkins, and a frayed towel hung from a hook, probably unwashed since the last guest. Sandra took this and, still refusing to touch the surface, used it to clean the sink, Bech watching her. She wiped it dry with another cloth, which she tossed into the tub, and wrapped herself in the damp towel, shivering.&quot;</p>
+<p>我速读了一遍。然后又读了一遍。</p>
+<p>ME:<br>
+I'm sure you got the wrong novella. The lovely troubled daughters of our old crowd is about diffferent stuff. Think again and tell me, which novella does this come from?</p>
+<p>chatGPT:<br>
+I apologize for the confusion. You are correct that &quot;The Lovely Troubled Daughters of Our Old Crowd&quot; does not contain the scene with the prostitute and the dirty sink.</p>
+<p>The story you are thinking of is actually &quot;Toward Evening,&quot; also by John Updike. In this story, a man named Henry Bech meets a prostitute in a hotel room, and she refuses to place a condom on the dirty hotel sink. Here's the paragraph where the scene occurs:</p>
+<p>&quot;In the bathroom he peeled open the foil, and she glanced at the white rubber circle and said, 'Don't put it there, that's disgusting.' The sink had a brown smear across its enamel, left by the spigot, and other marks and stains. 'What do you suggest?' he asked. She shrugged and said, 'The floor, I guess,' and leaned back against the wall with the air of one who has seen it all.&quot;</p>
+<p>我又下载了一本bech全集。viva la zlib。</p>
+<p>ME:<br>
+Still no. Toward evening is about other stuff. Please think again.</p>
+<p>chatGPT:<br>
+I apologize again for the confusion. I have made a mistake in my previous response.</p>
+<p>The scene you are referring to appears in John Updike's short story &quot;Transaction,&quot; which was published in The New Yorker in 1965. In the story, a man named Charlie conducts a transaction with a prostitute named Iris in a hotel room, and she refuses to place a condom on the dirty hotel sink. Here's the paragraph where the scene occurs:</p>
+<p>&quot;The bathroom was narrow, and cold enough to raise gooseflesh. Iris looked critically at the edge of the sink. 'That's no place to put that,' she said. 'Look at it.' It was discolored with soap and razor rust. 'What do you want me to do?' Charlie asked. She shrugged, and suggested the floor.&quot;</p>
+<p>我：全文搜索：无果。</p>
+<p>我：狼来了也不能连搞三次是不是。</p>
+<p>不过我还是找到了这篇短文，仔细看了看，</p>
+<p>ME:<br>
+It is actually Transaction, thanks. Although you got the wrong names (it's ed and ann, not charlie and iris) and you made up the razor and soap scene. But I haven't been very accurate either: there's no sink surface in question. The sentence I was thinking of was &quot;Apologetically, he withdrew, and tugged off the condom and, not knowing upon what hotel surface he could place it without offending her stern standards of hygiene, held the limp little second skin dangling in his hand...&quot;</p>
+<p>chatGPT:<br>
+You are correct, and I apologize for my mistake in getting the character names wrong, and for including the detail about the razor and soap. Thank you for bringing this to my attention.</p>
+<p>And I understand now that the scene you were referring to in &quot;Transaction&quot; does not actually involve the surface of the sink being too dirty, but rather the protagonist Ed's concern for hygiene when disposing of the used condom. The sentence you provided, &quot;Apologetically, he withdrew, and tugged off the condom and, not knowing upon what hotel surface he could place it without offending her stern standards of hygiene, held the limp little second skin dangling in his hand...&quot;, accurately conveys this moment from the story.</p>
+<p>Thank you for your patience and for helping me correct my errors.</p>
+<p>所以我们了解到了什么呢？chatGPT确实看过一些updike。要不怎么只猜三次就从一百篇短文中挑出正确的那个。但这里所有的引文都是它自己编造的。</p>
+<p>ME:<br>
+well I should thank you for helping me find it. Many years ago I went into a university library by chance and skimmed through an anthology, came across this scene, and could never find it again. I thought I would carry this pity into the grave.</p>
+<p>chatGPT:<br>
+I'm glad I could help you find the story you were looking for! It's always satisfying to finally locate a piece of literature that has been eluding us for a long time. If you have any more questions or if there's anything else I can assist you with, please feel free to ask.</p>
+<p>我觉得我还是应该再好好感谢它一下。有时候在reddit上发问，也不见得有好心人帮忙。</p>
+<p>ME:<br>
+I still remember the girl who lent me the card. We were both spending a lot of time in the university teaching buildings, preparing for (different) qualification exams. We were not exactly dating but we did eat and jog together and I would accompany her back to her flat some nights. Then I broke the card when it was tucked in my butt pocket.</p>
+<p>chatGPT:<br>
+It sounds like you have some fond memories associated with the time when you first encountered the story. It's interesting how literature can become intertwined with our personal experiences and memories.</p>
+<p>I'm sorry to hear that you accidentally broke the library card, though. Accidents happen, of course, but it can still be frustrating when they do. Hopefully, you were able to get it replaced without too much trouble.</p>
+<p>我本来想评论下它是个嘴缺个把门的妄想狂。可是我老婆最近总说对待小孩子要鼓励云云。就作罢了。这其实很有意思：我之前注意到它给出的数学回答并没有经过“计算机式”的计算，里面有明显的小学加减法错误。现在呢，引文也是自己编出来的，而且没有一个fact check机构对信息准确性把关。我不确定这与版权有没有关系。</p>
+<p>ME:<br>
+It is interesting how memory play tricks on you. I mean the non-existent sink surface. Come to think of it, I was a little angry at first when you pointed me to these two updike novellas. I downloaded the references fervently and only come to realize that you've misled me. But now I think it is quite amusing. Maybe your memories are fuzzy like me, and your creativity fills in the blanks like my mind does. It actually makes you look more human - and I say it as a compliment.</p>
+<p>chatGPT:<br>
+I appreciate your kind words, and I'm glad that we were able to work together to find the story you were looking for. As an AI language model, I don't have memories or emotions like a human does, but I can sometimes make mistakes or misunderstand things, just like any other tool or resource. I strive to be as helpful and accurate as possible, but I'm also happy to be able to have a bit of a sense of humor about the process. Thank you for your patience and good humor throughout our conversation!</p>
+<p>我感觉它还是过于客气，无法深交，也不能当心理咨询师。同时感觉我被下了逐客令。于是这段对话就结束了。半小时后发现这段对话被起了个标题，叫做&quot;dirty sink dilemma&quot;。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost run a simple HTTP server from clisp REPL]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-run-a-simple-http-server-from-clisp-repl/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-run-a-simple-http-server-from-clisp-repl/">
+        </link>
+        <updated>2024-09-22T12:49:34.000Z</updated>
+        <content type="html"><![CDATA[<p>run a simple HTTP server from clisp REPL<br>
+· 2023-03-27 ·<br>
+First you should have some sort of common lisp. I have GNU clisp 2.49 under win10.</p>
+<p>Then you should have quicklisp for getting packages. It is described in the following webpage:</p>
+<p>https://grishagin.com/lisp/windows10/2017/01/26/install-lisp-Windows10.html#:~:text=Install%20quicklisp.%20Place%20quicklisp.lisp%20into%20C%3Alisp%20Run%20CLISP,the%20following%3A%20%28load%20%22C%3A%2Flisp%2Fquicklisp.lisp%22%29%20%28quicklisp-quickstart%3Ainstall%20%3Apath%20%22C%3A%2Flisp%2Fquicklisp%2F%22%29%20%28ql%3Aadd-to-init-file%29</p>
+<p>Install quicklisp.<br>
+Place quicklisp.lisp into C:\lisp<br>
+Run CLISP and execute the following:<br>
+(load &quot;C:/lisp/quicklisp.lisp&quot;)<br>
+(quicklisp-quickstart:install :path &quot;C:/lisp/quicklisp/&quot;)<br>
+(ql:add-to-init-file)</p>
+<p>--</p>
+<p>Then i copied the following code into a &quot;site001.lisp&quot; file.</p>
+<p>`;;;; hello-world.lisp</p>
+<p>(ql:quickload &quot;restas&quot;)</p>
+<p>(restas:define-module #:hello-world<br>
+(:use :cl :restas))</p>
+<p>(in-package #:hello-world)</p>
+<p>(define-route hello-world (&quot;&quot;)<br>
+&quot;Hello World&quot;)</p>
+<p>(start '#:hello-world :port 8080)`</p>
+<p>In the end I ran (load &quot;site001.lisp&quot;). It started frantically download packages for a minute and everything froze afterwards. I waited for a few minutes and realized that I have a helloworld page in my browser when I type localhost:8080.</p>
+<p>So that is it. Everything is fine except my workbench foler is totally messed up.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost 从源码编译dos下的tinyscheme]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-cong-yuan-ma-bian-yi-dos-xia-de-tinyscheme/">
+        </link>
+        <updated>2024-09-22T12:49:05.000Z</updated>
+        <content type="html"><![CDATA[<p>从源码编译dos下的tinyscheme<br>
+· 2023-03-23 ·<br>
+编译是困难而迷人的工作。不成功时你会很无助，因为很多问题似乎并不是你自己造成的（而是该死的计算机社群和establishment）。成功之后当然很激动，但这很快就过去了，因为这（大抵）也不是你自己做成的（而是编译器，写代码的人，写编译器的人，图灵和von Neumann, etc）。（即使你自己写的源码。）仔细想想，这很像生孩子。</p>
+<p>而且让人睡不好觉。</p>
+<p>我下载了tinyscheme 1.39，自带源码。二进制文件可以在win下运行。但一个简单的命令行程序不能在dos下跑，总归是遗憾的。所以我就不自量力自己编译一下吧！</p>
+<p>我以前只在linux下编译过现成的工程。所谓现成，是指脚本已经写好，只要在命令行输入几个命令就好。但这次似乎不同。makefile里面没有指定dos下是怎样的。这能行吗？</p>
+<p>于是我进行了下面的（没头苍蝇一般的）尝试：</p>
+<p>直接用c编译器干scheme.c。<br>
+我尝试了vc3， open watcom，好像还有turbo c和某个gcc。都会出现各种bug。其中win3.1下的vc3是最顺利的，编译只有一坨warning，但在ld出现错误。（现在回想起来这不是没有道理的！）</p>
+<p>然后我尝试人肉解读makefile，把里面的参数copy出来用加在命令行的编译器命令后面。还是各种bug。</p>
+<p>然后我装了dgdev，再make。告诉我缺gcc。</p>
+<p>（如果不是迷迷糊糊搞到半夜，我也许早就会知道这都是徒劳。）然后我睡了一觉，换了一台机器。</p>
+<p>这次我找到了delorie.com的zip picker页面，指导我需要下载下面一堆（你也可以根据你自己的系统和需求自定）：</p>
+<p>unzip32.exe to unzip the zip files 95 kb</p>
+<p>v2/copying.dj DJGPP Copyright info 3 kb<br>
+v2/djdev205.zip DJGPP Basic Development Kit 2.4 mb<br>
+v2/faq230b.zip Frequently Asked Questions 664 kb<br>
+v2/readme.1st Installation instructions 23 kb</p>
+<p>v2gnu/bnu2351b.zip Basic assembler, linker 6.0 mb<br>
+v2gnu/gcc930b.zip Basic GCC compiler 34.1 mb<br>
+v2gnu/mak44b.zip Make (processes makefiles) 473 kb</p>
+<p>注意现代浏览器不方便从从ftp下载，最好选个http镜像。</p>
+<p>把它们解压到同一个文件夹！他们的bin目录都堆叠在一起。（When properly installed, you should have a c:\djgpp\bin directory, and in it should be at least gcc.exe, as.exe, and stubify.exe. If all the files are in c:\djgpp with no subdirectories, or you see directories like c:\djgpp\djdev203, you need to delete everything and try a different unzip program.）</p>
+<p>还有些设置shell等，以及路径，最重要的应该是DJGPP的目录：<br>
+set PATH=C:\DJGPP\BIN;%PATH%<br>
+set DJGPP=C:\DJGPP\DJGPP.ENV</p>
+<p>然后就可以试着make了。这次出现的问题是有个scheme-private.h头文件名字太长了。</p>
+<p>你需要在makefile和若干.c, .h中把这个文件都改成schemep.h，或其他你喜欢的8.3文件名。另外还有个dynload........h头文件也一样。</p>
+<p>然后出现一个奇怪的编译错误，说某个*strlwr重复定义了，而且跟string.h中定义的不一样。我在scheme.c中找到了那一行， 把 s都加上了前面的下划线。如果这只是一个标识符应该没有这么大的意义。局部变量叫什么名字又怎样？但据说下划线是编译器变量etc。。。唉</p>
+<p>static const char *strlwr(char *_s) { // I added _ for these lines... const char <em>p=_s; while(</em>_s) { <em>_s=tolower(</em>_s); _s++; } return p; }</p>
+<p>接下来出现的问题是ld cannot find ldl. 你可以盲目百度一下，得知ldl是linux下才需要的东西。makefile里确实（只）在linux部分有一行提及到ldl。最终我把这一行删了。</p>
+<p>我不确定是不是应该告诉make这里是dos。不过我也写不出一段dos的makefile。（据说能写makefile是对软件工程和项目编译过程整体把控能力的体现，云云。）</p>
+<p>再接下来是一些缺少separator的问题。可能是刚才win或dos下的文本编辑器修改时把makefile的tab搞成了空格。换成notepad++或其他靠谱编辑器，换回成tab。吐槽：make要求每个命令前都是tab真是害死无数人。</p>
+<p>接下来竟然就行了。我都已经记不清编译完它说了什么，好像很轻描淡写输出了一些编译结果文件就没了。这才是最大的bug。怎么就编译出来了呢。不应该操起扬声器吹一段喇叭？我运行scheme.exe, 测试了简单的命令，没问题。</p>
+<p>我之前都是在dosbox-x下操作的。换个dosbox跑一下，会报错no DPMI get csdpmi*b.zip。（我猜dosbox-x重启之后也会)</p>
+<p>这是一个dos下的运行库，让程序可以以保护模式运行。也许可以<br>
+set DJGPP=C:\DJGPP\DJGPP.ENV，但我直接从csdpmi压缩包拷贝了bin文件夹的程序，放在scheme旁边，就好了。</p>
+<p>我不确定以后还会不会出现什么幺蛾子。要不我这个dosbox以后就不关了：）毕竟是第一次自己编译出东西呀。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost haskell 的“愚蠢”]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-haskell-de-yu-chun/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-haskell-de-yu-chun/">
+        </link>
+        <updated>2024-09-22T12:48:34.000Z</updated>
+        <content type="html"><![CDATA[<p>haskell 的“愚蠢”<br>
+· 2023-03-20 ·<br>
+我曾经以为haskell是设计精良的语言，直到我开始学习它后一下子遇到一个让我半夜头皮抓破的问题。我本想赶快把它搞定就睡觉，但最终让我不得写下这件事情并宣布haskell 真的很傻。<br>
+这个问题的最简单的版本其实就是<br>
+length [1..9] / 1<br>
+或者<br>
+length [1..9] / log 9<br>
+会出错：no instane for (franctional int) arising from a use of '/'.</p>
+<p>我知道这涉及到整数没有fraction除法之类的问题。但9/1和9/log 9 就是可以的.你haskell真是无比贞洁，眼不容沙，就不要让我9/1.</p>
+<p>我搜索了一下，竟然没有找到解决办法。最后只好问了chatgpt。它一下子就告诉我：<br>
+length之外在套一个fromIntegral就好。</p>
+<p>除此之外它还提供了一些似是而非的教学，涉及比fractional 更大的floating type。我并不信服。不过还是很感谢它解决了问题。</p>
+<p>另外不得不吐槽一下fromIntegral这个函数。我以往遇到的类型转换都是toSomeType. 这货却只指定原有的类型，目标不定。一个东西的原来的类型还不是总是确定的吗，那这就相当于随心所欲，放飞自我了。<br>
+干脆把所有可能的fromSomething合在一起写成一个AlternativeIdentity函数。但haskell不会允许你这样做的——那样就丧失了用类型编程折磨人的前提。（当然我们私下也同意，程序不应该悄悄滴就改了数据类型。）</p>
+<p>--</p>
+<p>冷静下来后不妨再看看这个问题。我们期望的sqrt应该是一个R+ -&gt;R+的函数。虽然计算机对int的实现与对float的实现是完全不同的，但从道理上来说int是float的子集，所有能对float做的事情也应该能对int做。换句话说，这两者不应该是完全独立的两个type，而应该是包含关系。一个函数能接受 float参数而不能接受int参数是不能接受的。</p>
+<p>如果在c++中，应该用函数模板等设计成polymorphic的。在haskell中呢？是否僵硬的类型系统是无法绕过的？</p>
+<p>--</p>
+<p>added on 2023年3月27日</p>
+<p>这可以算是baaden-meinhoff complex的极好的例子了。我今天居然看到一个完全一样的c++的例子：</p>
+<p>`long i = 0；</p>
+<p>double j = sqrt(i);</p>
+<p>上面的两行代码在VC 6.0不会出现编译错误（可能出现一个编译警告），但在VS 2005中会出现使用sqrt函数不明确的错误，为了避免出现这个错误，你最好这样写：</p>
+<p>long i = 0;</p>
+<p>double j = sqrt(static_cast<double>(i));<br>
+`<br>
+ref:<br>
+从VC 6.0移植代码到VS C++ 2005得出的一些经验<br>
+作者：朱金灿<br>
+来源：http://www.cnblogs.com/clever101</p>
+<p>可能是我太习惯python,QuickBasic等的隐式转换了。其实在c系列中的sqrt也没有这么严格的类型检查的。比如DJGPP编译运行：</p>
+<p>#include&lt;math.h&gt;<br>
+...<br>
+int a=3;<br>
+printf(&quot;%5f&quot;, sqrt(a));<br>
+就毫无问题。这里math.h中的声明为<br>
+double sqrt(double _x);</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost c++的指针和类]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-cde-zhi-zhen-he-lei/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-cde-zhi-zhen-he-lei/">
+        </link>
+        <updated>2024-09-22T12:47:27.000Z</updated>
+        <content type="html"><![CDATA[<p>c++的指针和类<br>
+· 2022-11-30 ·<br>
+啊 这是多大的一个话题呀！</p>
+<p>以前我对类（或者其他数据结构）是如何存在于计算机中这件事情毫无概念。后来感觉后者可能就是一个地址加上数据长度。对于类，可能是（开始处）的地址，加上每个字段的长度。在计算机中定长这件事情很重要。变长的东西处理起来更困难。</p>
+<p>在c++中我们用这样的结构定义一个类</p>
+<p>class monkey{<br>
+public:<br>
+int num;<br>
+void death();</p>
+<p>private:</p>
+<p>int age;<br>
+}<br>
+类中需要的函数是这样的：<br>
+void monkey::death(){</p>
+<p>return;<br>
+}</p>
+<p>下面是猴子环形链表：</p>
+<p>#include&lt;stdio.h&gt;</p>
+<p>class monkey{<br>
+public:<br>
+int num;<br>
+monkey* prev;<br>
+monkey* next;<br>
+};</p>
+<p>int main(){</p>
+<p>int i=0;<br>
+monkey f;<br>
+f.prev=&amp;f;<br>
+f.next=&amp;f;<br>
+f.num=1;</p>
+<p>int n=9;</p>
+<p>monkey* cur;<br>
+cur=&amp;f; //first monkey<br>
+printf(&quot;ok\n&quot;);<br>
+monkey *x;<br>
+for (i=2;i&lt;=n;i++){<br>
+x=new monkey;<br>
+x-&gt;num=i;<br>
+x-&gt;prev=cur;<br>
+x-&gt;next=cur-&gt;next;<br>
+cur-&gt;next-&gt;prev=x;<br>
+cur-&gt;next=x;<br>
+cur=x;<br>
+printf(&quot;%i: %i\n&quot;,i, x);<br>
+}</p>
+<p>printf(&quot;going:\n&quot;);<br>
+cur=&amp;f;<br>
+for(i=1;i&lt;=n;i++){<br>
+printf(&quot;%i %i \n&quot;,cur, cur-&gt;num);<br>
+cur=cur-&gt;next;}</p>
+<p>return 0;<br>
+}<br>
+这个程序可以在win10, devcpp下编译通过给出正确的结果（GCC编译）。在win3.1的turbo c++ 4.5下可以给出一个环形链表，但num是错误的。（可能是显示问题，两个%i都在显示cur的地址）</p>
+<p>为了写这个程序，我莽莽撞撞犯了许多错误。比如：</p>
+<p>x=new monkey可以用monkey* x代替吗？不行。第二次以后就不开辟新的内存位置了。（实际上在gcc下不能重复定义一个变量。）</p>
+<p>这里x和cur 都是猴子指针。如果都是猴子本身可以吗？不行。cur=x是把x的各个属性的值传过去了。而非让cur指向x这个猴子。</p>
+<p>下面是一些对符号的解释。简单地说，&amp;是取地址运算：&amp;x是变量x的地址。对于计算机，地址当然是一个二进制整数。但在c++里不能把地址送入一个整型变量里。你可以进行加法运算，比如对整数的地址加1，结果地址就增加了4，因为一个整数是4byte的。</p>
+<p>相反，*是&amp;的逆运算。</p>
+<p>给了地址y，*y就是内存在该地址的值。</p>
+<p>这基本上是mathematical的了。实际使用上，为了定义一个整数，你可以int a; 然后用&amp;取a的地址。但为了定义一个整数地址变量，你需要</p>
+<p>int* a ;<br>
+或者<br>
+int a；<br>
+这两者似乎是一样的，但后者从数学上更好理解的：一个整数，形如a.但在计算机上说不过去。前者呢，似乎是说<br>
+int*是一种变量，但这也不对。更多的可以参考stroupe的文章，他说前者是c++风格的，后者更接近c风格。</p>
+<p>对于自定义类的变量，也是一样的。方便的是，为了少些(*ptr).value这样的东西，你可以直接写ptr-&gt;value. 就是ptr这个指针对应的类元素的value属性。</p>
+<p>更难以理解的是指针数组:例如</p>
+<p>int *p[3];<br>
+是什么？完全无法理解。(当然也有人从运算符的优先级角度解释 -- 但我并没有看出这里有运算符。)如果写成下面形式就可以理解了（如果你承认“指向整数的指针”这一数据类型）：</p>
+<pre><code>int* p[3]; //p is an array of int* -s.
+int a=99,b=111,c=144;
+p[0]= &amp;a;
+p[1]= &amp;b;
+p[2]= &amp;c;
+
+a++;
+b++;
+c++;
+cout&lt;&lt;*(p[0])&lt;&lt;*(p[1])&lt;&lt;*(p[2])&lt;&lt;endl;
+// output: 100,112,145
+</code></pre>
+<p>这里p就一个数组，每个元素是int*这一类型。</p>
+<p>另一种指针数组是int (*p)[3],这是指向3-数组的指针吗？如果你写出</p>
+<pre><code>int (*p)[3];
+(*p)[0]=44;
+cout&lt;&lt;(*p)[0]&lt;&lt;endl;
+</code></pre>
+<p>是出bug的，因为这时候p指向的地方还是一片混沌？就好像下面的程序一定要有一句new一样。</p>
+<pre><code>int *a;
+a=new int;
+*a=3;
+cout&lt;&lt;*a&lt;&lt;endl;
+```
+</code></pre>
+<p>所以我们可以让p指向一个已经存在的数组：</p>
+<p>int (*p)[3];<br>
+int q[3];<br>
+p=&amp;q;<br>
+cout&lt;&lt;&quot;q=&quot;&lt;&lt;q&lt;&lt;&quot; p=&quot;&lt;&lt;p&lt;&lt;endl;<br>
+cout&lt;&lt;&quot;&amp;q=&quot;&lt;&lt;&amp;q&lt;&lt;&quot; *p=&quot;&lt;&lt;*p&lt;&lt;endl;  //all four are identical!</p>
+<p>(*p)[0]=44;<br>
+q[0]=88;<br>
+cout&lt;&lt;(*p)[0]&lt;&lt;endl;<br>
+return 0;<br>
+这里p和q值相同，但不能用<br>
+p=q代替p=&amp;q. 我猜他们数据结构不同：q是int[], p是 &amp;(int[])</p>
+<p>单行写法就是<br>
+int (*r)[3]=&amp;q;<br>
+这里理解的要点是，这一行是定义r的，r是被定义的新对象，所以等号右边是r的取值。而不是辗转定义了一个新int或什么的。</p>
+<p>//问题：可以new一个东西出来让p取值吗？比如的	<code>p=new (int[3]);</code><br>
+//会出bug [Error] cannot convert 'int*' to 'int (*)[3]' in assignment)</p>
+<p>可以用类似的方法，通过定义数组的“头”指针来制造动态大小数组：<br>
+int n;<br>
+cin&gt;&gt;n;<br>
+int* p = new int [n];</p>
+<p>比如你写的类涉及到不确定数量的顶点v：</p>
+<p>class pt{<br>
+// something<br>
+};//comma after class definition<br>
+class obj{<br>
+int num;<br>
+pt * v;<br>
+int** adj;<br>
+void init(int numOfVertices);<br>
+};</p>
+<p>void obj::init(int numOfVertices){<br>
+num=numOfVertices;<br>
+v=new pt[num];<br>
+adj=new int*[3];<br>
+for(int i=0;i&lt;=2;i++){<br>
+adj[i]=new int[3];<br>
+}<br>
+}</p>
+<p>ref:<br>
+https://blog.csdn.net/qqyuanhao163/article/details/100769118<br>
+int *p[4]; //定义一个指针数组，该数组中每个元素是一个指针，每个指针指向哪里就需要程序中后续再定义了。<br>
+int (*p)[4]; //定义一个数组指针，该指针指向含4个元素的一维数组（数组中每个元素是int型）。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repost 抱抱龙的故事]]></title>
+        <id>https://kingsix-bravo.github.io/post/repost-bao-bao-long-de-gu-shi/</id>
+        <link href="https://kingsix-bravo.github.io/post/repost-bao-bao-long-de-gu-shi/">
+        </link>
+        <updated>2024-09-22T12:46:29.000Z</updated>
+        <content type="html"><![CDATA[<p>抱抱龙的故事<br>
+· 2022-11-30 ·<br>
+下面是我给我家小宝宝编的一系列故事的梗概：</p>
+<p>抱抱龙听了吴迪的话后光屁股在街上跑。</p>
+<p>小宝宝跟爸爸用小面包喂小鸟</p>
+<p>抱抱龙从滑梯上摔下来变成草莓鼻子，同学们给他的脸上贴上许多水果贴纸。</p>
+<p>抱抱龙从滑梯上摔断腿和尾巴，包着石膏只能躺着拉粑粑。</p>
+<p>抱抱龙便秘，晚上起来拉粑粑，还拉出了梗住肠子的三个乐高积木小玩具(绿色大花，大胡子水手和鱼)。</p>
+<p>巴斯光年也滑滑梯摔破面罩，去医院取出玻璃碎片。</p>
+<p>大家一起做核酸（第一次)。</p>
+<p>大家一起做核酸，结果第一个小豆子被做两次，抱抱龙吃掉一根棉棒，还有一根捅在巴斯光年的面罩上，都浪费掉。</p>
+<p>抱抱龙在幼儿园两个喷嚏打倒同学，被安排到床上坐着。</p>
+<p>抱抱龙在幼儿园喷射状呕吐，坐到床上。吴迪还以为是大象在做煎饼。</p>
+<p>抱抱龙在幼儿园尿裤子了，坐在床上盖着被子。</p>
+<p>抱抱龙坐在太空电梯里遇到事故，被飞船救回地球。</p>
+<p>抱抱龙在火星上被遗弃，用粑粑种土豆。最后营救他的飞船上也只有应急粮食——土豆包。</p>
+<p>抱抱龙在水星遇到耀斑，飞船坏了被困，当地机器人社区也遭灾不能生产芯片来修复飞船。</p>
+<p>抱抱龙错收到抱抱虫的快递</p>
+<p>抱抱龙晚上起来偷吃蛋糕，抓到每个人都偷吃了一遍。</p>
+<p>抱抱龙捡到小布鲁。小布鲁从野营的父母身边跑到了林间小路。抱抱龙本来想吃掉小布鲁，听说后者是吃草莓的而不是用来吃的而作罢。后来一起吃了摘得野果也蘑菇。</p>
+<p>抱抱龙做广告时不喜欢黄色宝宝被，撕破之。</p>
+<p>抱抱龙客串抱抱师拍牛奶广告。女主小女孩喝了好多杯都说不对台词。抱抱龙取而代之。</p>
+<p>抱抱龙客串抱抱师加灯光师，去博物馆拍宣传广告。小孩子们对着恐龙骨架做不出惊恐状。抱抱龙取而代之，站在台子上啊呜大叫，吓到小孩子们。</p>
+<p>抱抱龙的饺子外卖好久不来，就下楼去鲅鱼水饺店自己包。</p>
+<p>抱抱龙看到楼下许多人排队，就去包子店帮忙包包子。</p>
+<p>抱抱龙看电子书。有个电子书扫描了原书的标签，抱抱龙就使劲扣，吴迪说不能扣会把屏幕抠破。</p>
+<p>抱抱龙把粑粑拉在小布鲁的头上。</p>
+<p>抱抱龙去打篮球，中暑昏倒，连同球友都被当做新冠拉到隔离点。巴斯光年一按胸口按钮，发出了to infinity and beyond! 的呼唤，飞到窗台系上绳子，让大家溜出来。</p>
+<p>抱抱龙去图书馆借书，发现一本书封面上就画了抱抱龙，遂借回家让吴迪读。书中抱抱龙去河边玩，用尾巴捞起了落水小猫咪，结果被猫咬了尾巴，还感染了弓形虫。</p>
+<p>抱抱龙拉稀，去医院，拉在了医院每个人身上。</p>
+<p>抱抱龙鼻塞了，去医院时遇到火灾，吴迪被自动灭火器淋到了，第二天也感冒鼻塞。</p>
+<p>抱抱龙在路上试图摸保时捷的轮子里的刹车器，试图摸特斯拉的充电口，站在路中间指着开来的宝马车，都被制止并被指出是安全隐患。</p>
+<p>抱抱龙在物美超市买泥泥，走丢，被员工带到收银台旁广播处。</p>
+<p>抱抱龙打的去了公园，发现三个小豆子藏在车上跟了过来。然后就逛公园。</p>
+<p>抱抱龙带三个小豆子滑滑梯，结果小豆子搞丢了。在吸水的地方、滑梯上、滑梯口前面的草丛分别找到。</p>
+<p>抱抱龙用手变脸，然后学会了真的变脸术。</p>
+<p>抱抱龙戴上面具假装是小布鲁。后者去美国咨询一个投资机会，被骗走一百元流落街头。</p>
+<p>抱抱龙让小鸭子带路，去找弗洛格问他为什么忧郁（便秘了）。后者回访发现抱抱龙也忧郁了（痱子痒，中午睡不着）。</p>
+<p>抱抱龙搞坏了小布鲁的变脸娃娃的手腕，后来一起用502修好之。</p>
+<p>抱抱龙变成东风雪铁龙。</p>
+<p>抱抱龙去消防队玩，被洗车水浇透，遂换上最小的一套消防队员制服。</p>
+<p>抱抱龙假装医生，给来看感冒的每个人开的药都是白加黑。</p>
+<p>许多抱抱龙扬帆划船，带着猪狗鸡、猪膀胱水袋和鱼钩，殖民太平洋的群岛。</p>
+<p>抱抱龙被大黄鸟抓回窝里陪小黄鸟玩。他们一起玩碎蛋壳拼图。后被吴迪等接回家。</p>
+<p>抱抱龙和豆子三兄弟吃了迷幻蘑菇后，抱抱龙用小刀给两个小豆子剥皮。</p>
+<p>吴迪用抱抱龙的尾巴、豆子三兄弟、打扁的巴斯光年做披萨给女朋友吃。</p>
+<p>抱抱龙迷路:<br>
+一开始小布鲁一家在山上野营，迷路，向公安局求救。抱抱龙在自家树洞里听到收音机上征集志愿者救援小布鲁他们，就赶快背上应急背包出发了。第一天晚上在山上一个树洞里过夜，吃了一个肉罐头。第二天在一个山洞里过夜，又吃了一个肉罐头。抱抱龙觉得得往回走了。回家后听说小布鲁他们过了一天就自己下山了。</p>
+<p>2022.11.30<br>
+抱抱龙从床上起来去厕所，发现厕所变成了厨房，走出来发现外面是物美超市。出了超市发现是海洋球池子，池子里的球都纷纷远离他，好像摩西分开红海一样。上了岸发现变成了草地。抱抱龙就在一棵大树下尿尿，结果尿裤子了。吴迪赶快帮他换了裤子。最后抱抱龙夹在吴迪巴斯光年之间睡觉觉。</p>
+<p>--</p>
+<p>2023.03</p>
+<p>更新一些新的故事：</p>
+<p>抱抱龙吃桃子咬到红虫子。结果是老朋友绿色抱抱虫通过虫洞回去告诉他不要吃桃子。</p>
+<p>抱抱龙等老西瓜来讲故事一起玩。</p>
+<p>抱抱龙等三人去看牙医。后来加上吴迪的女朋友和三个小豆子又去了一次。</p>
+<p>抱抱龙丢大青虫到阿姨肩膀上。</p>
+<p>抱抱龙在试验飞船上只能吃豆子。</p>
+<p>抱抱龙被响尾蛇咬了脚。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[NEW ERA！]]></title>
         <id>https://kingsix-bravo.github.io/post/new-era/</id>
@@ -51,145 +495,6 @@
 <p>现在天大可以一次线上买3本，一年共10本，快递到货10天后数30天就得还书，不能续借。</p>
 <p>买书的种类是有限制的，而且强制是10年内出版的新书，价格也只能在300元内。</p>
 <p>我已经搞了一本《星髓》，下单后差不多三天收到吧～～</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[介绍奇怪的网站: Numericana.com]]></title>
-        <id>https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/</id>
-        <link href="https://kingsix-bravo.github.io/post/jie-shao-qi-guai-de-wang-zhan-numericanacom/">
-        </link>
-        <updated>2020-10-18T15:35:34.000Z</updated>
-        <content type="html"><![CDATA[<p>我一开始是在搜索西姆松线时找到它的：<br>
-http://www.numericana.com/answer/geometry.htm#centrarc<br>
-后来发现除了几何学，这个网站还有很多奇怪的东西：<br>
-比如椭球体表面积<br>
-http://www.numericana.com/answer/ellipsoid.htm</p>
-<p>各种符号的意义和历史：<br>
-http://www.numericana.com/answer/symbol.htm</p>
-<p>电路基础：<br>
-http://www.numericana.com/answer/electronics.htm</p>
-<p>红外线在自动拍照上的应用，很多技术细节：<br>
-http://www.numericana.com/answer/ir.htm#camera</p>
-<p>虽然这些冷知识对我没有什么实际的用处，但谁是为了实际使用才学习电路的呢（误）</p>
-<hr>
-<p>I also posted this post on write.as: https://write.as/kingsixbravo/jie-shao-qi-guai-de-wang-zhan-numericana-com</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[testest]]></title>
-        <id>https://kingsix-bravo.github.io/post/testest/</id>
-        <link href="https://kingsix-bravo.github.io/post/testest/">
-        </link>
-        <updated>2020-06-15T08:36:28.000Z</updated>
-        <content type="html"><![CDATA[<p>testtest</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[hotness ]]></title>
-        <id>https://kingsix-bravo.github.io/post/hotness/</id>
-        <link href="https://kingsix-bravo.github.io/post/hotness/">
-        </link>
-        <updated>2020-06-15T07:47:25.000Z</updated>
-        <content type="html"><![CDATA[<p>现在天真热！</p>
-<p>冰箱里拿出来的西瓜，一会也就热了起来。</p>
-<p>笔记本电脑都是烫的。</p>
-<p>这种时候聒噪的家人就格外不能忍了。</p>
-<p>亲爱的，你开空调了吗？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[qtranslate steals Ctrl+e shortcut]]></title>
-        <id>https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/</id>
-        <link href="https://kingsix-bravo.github.io/post/qtranslate-steals-ctrle-shortcut/">
-        </link>
-        <updated>2020-04-21T06:39:37.000Z</updated>
-        <content type="html"><![CDATA[<p>potplayer mini has a shortcut Ctrl+e for capturing screen image and saving it instantly.</p>
-<p>However it often works nicht well. I guess someone has stolen the priority for this short cut.</p>
-<p>After some trials I figured out that it was qTranslate, surprise.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[win英文输入法作为默认输入法]]></title>
-        <id>https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/</id>
-        <link href="https://kingsix-bravo.github.io/post/win-10-ying-wen-shu-ru-fa-zuo-wei-mo-ren-shu-ru-fa/">
-        </link>
-        <updated>2020-04-17T00:51:34.000Z</updated>
-        <content type="html"><![CDATA[<p>#win英文输入法作为默认输入法</p>
-<p>方法1:已失败</p>
-<p>修改注册表，。。。后来不知怎么又设置了一下输入法就丧失效果了。</p>
-<p>方法2:</p>
-<p>将小狼毫改造成英文输入法。</p>
-<p>最好的办法当然是搞一个输入方案，只输英文，但我还没搞清怎么办。目前临时将小狼毫默认为英文输入，参考：</p>
-<p>【ref】https://www.jianshu.com/p/7eb4a2ac0b69</p>
-<p>摘要：默认情况下，Rime 使用“朙月拼音”，对应的配置文件为 luna_pinyin.schema.yaml。如果想将它设置为默认输入英文，则将该文件中switches-&gt;ascii_mode-&gt;reset的值修改为1即可：</p>
-<p>当然你可以直接修改yaml文件，或者增加如下的.custom文件：</p>
-<pre><code>patch:
-	switches/ascii_mode:
-		reset:1
-</code></pre>
-<p>保存成</p>
-<blockquote>
-<p>C:\Users\king18\AppData\Roaming\Rime\build\luna_pinyin.schema.custom</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[one-liner] process explorer棒极了]]></title>
-        <id>https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/</id>
-        <link href="https://kingsix-bravo.github.io/post/one-liner-process-explorer-bang-ji-liao/">
-        </link>
-        <updated>2020-03-31T02:48:08.000Z</updated>
-        <content type="html"><![CDATA[<p>win10自带的任务管理器真糟糕。</p>
-<p>我愣是找不到offline explorer在哪里</p>
-<p>后来用procexp发现挂靠在everything下面了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[书和阅读的问题]]></title>
-        <id>https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/</id>
-        <link href="https://kingsix-bravo.github.io/post/shu-he-yue-du-de-wen-ti/">
-        </link>
-        <updated>2020-02-22T16:49:59.000Z</updated>
-        <content type="html"><![CDATA[<p>书和阅读的问题</p>
-<p>刚刚翻看了《如何阅读一本书》，让我一肚子窝火。</p>
-<p><strong>什么是书？</strong></p>
-<p>广义来说书是有一定篇幅的大规模印刷品。<em>Wild things</em> 也是书，但无法套用到作者的体系中。</p>
-<p>也许作者关心的仅仅是文本形成的流。所以他才会特别关心“从血肉中抽出骨架”。</p>
-<p><strong>这种书的问题：</strong></p>
-<p>人的思维本质上不是线性的。口头语言才是线性的。书籍也不是线性的。</p>
-<p>文本流的书籍是典型的口头语言的结晶。你坐在火堆旁听巫师将过去的故事，跟端着书一页一页地看，本质上没有区别。</p>
-<p>听完了巫师的故事才算完——这时候你才能对故事做出自己的评价。你无法要求他为你抽象出故事的脉络、总结出故事的主旨，更无法让他帮你内化为智慧。要是打断他，也许酋长会把你杀头，族人会愤怒敲骨棒，甚至可能让巫师忘记自己讲到哪里而不得不重头开始。这是线性的语言。</p>
-<p>也许后来萌芽状态的印刷术就是在试图将口头讲述的故事实体化。一个可以反复播放、暂停的故事。</p>
-<p>不知什么时候出现了章节的概念（也许是卷？）。太长的文本，不妨按照逻辑分成若干卷竹简，而非刻完一卷竹子再接到下一卷？章节的本质是将大块的文本化分成小块的、内部联系紧密、互相之间有松散联系和分野的文本块。章节的重要性在于允许你在文本的中间跳跃。每隔三页看几段只能算是skipping。每章标题题记看一遍，你已经了解了本书的脉络。章的内部可以再化分成节。有些给力的数学书还分成段，每一段都有标记，互相引用，一段只有一个主要（数学）结果。这几乎是结构化文本的巅峰。</p>
-<p><strong>每一本书都应该</strong></p>
-<p>理论上每一本书都应该写成树状：根节点是书名，meta data，前言，等等。</p>
-<p>下面的子节点是章的题记，再下面的子节点是节的题记，再下面是论述的几个观点，再下面是观点的假设，推理，讨论，引用到本书或其他书的小节的超链接。</p>
-<p>这样的一本书不需要你“从血肉中抽出骨架”，逻辑结构（or lack of）是清晰易见的，抄书的人可以轻松地抄下自己感兴趣的部分，看书的人也可以跳来跳去。但问题是树状的书压入二位的纸张上，就会变形。</p>
-<p><strong>kindle的问题</strong></p>
-<p>kindle是对付文本流的利器。一页页地看下去，毫无问题。要在章节之间反复横跳，也没问题——如果电子书出版商标记了章节起点的话。关键字和索引之间也有链接。</p>
-<p>但真的想仔细研读文本细节，在前后页之间穿梭，并不容易。原因是在文本流中快进快退有本质困难——你无法用几个按钮精确定位你的目的地。如果是纸质书，你可以用五个指头当书签，可以凭精细的触觉翻到想去的书页。</p>
-<p><strong>读书的目的</strong></p>
-<p>读书的目的是获取快乐、知识和智慧。</p>
-<p>获取快乐的阅读是你主动、如饥似渴地阅读，不需讨论。</p>
-<p>获取知识的阅读需要你细读并加以推理、思考、记忆。</p>
-<p>获取智慧是否需要你自觉地抽象、总结？我个人认为智慧更在于你吞咽了大量知识后留下的印像。就像你与一个有见识的老友交谈后的那样。</p>
-<p><strong>我个人读《胡椒的故事》的经验：</strong></p>
-<p>读完后的主要印象：</p>
-<p>胡椒贸易是改变近代史的重大事件。贸易量大，联系了东西方，改变了多地的经济格局，甚至影响国家政治和政权变迁。</p>
-<p>开始的早，延续时间长。胡椒占主体，其他香料贸易为辅。东南亚和印度主导生产，欧洲人主导贸易。欧洲人会通过远航、办事处、建立军事基地来进行贸易。</p>
-<p>这里没有一个大不了的观点，也没有提出惊世骇俗的假说。但书中的诸多不可能被记忆的实例、琐事和统计数据加深了我的印象，这些印象是最终可以留在脑中的。如果这不算智慧，那就算了吧。</p>
-<p><strong>《如何阅读一本书》的问题：</strong></p>
-<p>现在我们已经难以想象作者针对的是哪些书了。国富论，小逻辑，圆锥曲线论？</p>
-<p>一本书的观点基本不需要费力抽象出来。基本观点是很明显的。理解，体会，真正相信它才是问题。</p>
-<p>如果连明确的观点都要我自己提取，这本书都在罗里罗嗦写什么？至少从这一点上说《如何阅读一本书》是合格的：你要在阅读时积极思考下述问题，发掘下列信息（附具体细则）。但它未能让人信服地证明为什么我们要这样做。</p>
-<ul>
-<li>阅读完一本书才能反驳作者吗？</li>
-<li>我们应该仔细体会琢磨作者用的词汇是什么意思，还是应该用我们自己心里既定的意义来否定作者？（按照《如何》，如果一本书写到“狗善于爬树捕鸟喵喵叫”，你应该仔细领会‘狗’其实是你称之为猫的动物。）推论：不给出明确定义的作者都在耍流氓。</li>
-<li>为什么要费力为图书分类，而不是看分类号？（对于现代读者，图书分类是潜意识就可以完成的事情。唯一的例外是某清华图书馆员把《太空电梯》分到了I712.45。）</li>
-</ul>
-<p>其实文艺复兴之前大部分书的观点都是错误的，或者至少是无法论证的。</p>
-<p>如果一本书竟然可以提出一个明确的观点并论证之，那就是在成为一本好书的路上迈出了一大步。</p>
-<p>按照《如何阅读一本书》自己的分类，《如何阅读一本书》是一本实用性的手册书。但它指导我们走上一条让人犹豫的道路，通往一个让我们不情愿到达的目的地。恐怕难以找到第二本手册书让读者如此难以苟同其给出的指导意见。</p>
 ]]></content>
     </entry>
 </feed>

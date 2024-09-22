@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>repost haskell 的“愚蠢” | Gridea</title>
+<link rel="shortcut icon" href="https://kingsix-bravo.github.io/favicon.ico?v=1727009439782">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://kingsix-bravo.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="repost haskell 的“愚蠢” | Gridea - Atom Feed" href="https://kingsix-bravo.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="haskell 的“愚蠢”
+· 2023-03-20 ·
+我曾经以为haskell是设计精良的语言，直到我开始学习它后一下子遇到一个让我半夜头皮抓破的问题。我本想赶快把它搞定就睡觉，但最终让我不得写下这件事情并宣布haskell 真的很傻。..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kingsix-bravo.github.io">
+  <img class="avatar" src="https://kingsix-bravo.github.io/images/avatar.png?v=1727009439782" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              repost haskell 的“愚蠢”
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-09-22
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>haskell 的“愚蠢”<br>
+· 2023-03-20 ·<br>
+我曾经以为haskell是设计精良的语言，直到我开始学习它后一下子遇到一个让我半夜头皮抓破的问题。我本想赶快把它搞定就睡觉，但最终让我不得写下这件事情并宣布haskell 真的很傻。<br>
+这个问题的最简单的版本其实就是<br>
+length [1..9] / 1<br>
+或者<br>
+length [1..9] / log 9<br>
+会出错：no instane for (franctional int) arising from a use of '/'.</p>
+<p>我知道这涉及到整数没有fraction除法之类的问题。但9/1和9/log 9 就是可以的.你haskell真是无比贞洁，眼不容沙，就不要让我9/1.</p>
+<p>我搜索了一下，竟然没有找到解决办法。最后只好问了chatgpt。它一下子就告诉我：<br>
+length之外在套一个fromIntegral就好。</p>
+<p>除此之外它还提供了一些似是而非的教学，涉及比fractional 更大的floating type。我并不信服。不过还是很感谢它解决了问题。</p>
+<p>另外不得不吐槽一下fromIntegral这个函数。我以往遇到的类型转换都是toSomeType. 这货却只指定原有的类型，目标不定。一个东西的原来的类型还不是总是确定的吗，那这就相当于随心所欲，放飞自我了。<br>
+干脆把所有可能的fromSomething合在一起写成一个AlternativeIdentity函数。但haskell不会允许你这样做的——那样就丧失了用类型编程折磨人的前提。（当然我们私下也同意，程序不应该悄悄滴就改了数据类型。）</p>
+<p>--</p>
+<p>冷静下来后不妨再看看这个问题。我们期望的sqrt应该是一个R+ -&gt;R+的函数。虽然计算机对int的实现与对float的实现是完全不同的，但从道理上来说int是float的子集，所有能对float做的事情也应该能对int做。换句话说，这两者不应该是完全独立的两个type，而应该是包含关系。一个函数能接受 float参数而不能接受int参数是不能接受的。</p>
+<p>如果在c++中，应该用函数模板等设计成polymorphic的。在haskell中呢？是否僵硬的类型系统是无法绕过的？</p>
+<p>--</p>
+<p>added on 2023年3月27日</p>
+<p>这可以算是baaden-meinhoff complex的极好的例子了。我今天居然看到一个完全一样的c++的例子：</p>
+<p>`long i = 0；</p>
+<p>double j = sqrt(i);</p>
+<p>上面的两行代码在VC 6.0不会出现编译错误（可能出现一个编译警告），但在VS 2005中会出现使用sqrt函数不明确的错误，为了避免出现这个错误，你最好这样写：</p>
+<p>long i = 0;</p>
+<p>double j = sqrt(static_cast<double>(i));<br>
+`<br>
+ref:<br>
+从VC 6.0移植代码到VS C++ 2005得出的一些经验<br>
+作者：朱金灿<br>
+来源：http://www.cnblogs.com/clever101</p>
+<p>可能是我太习惯python,QuickBasic等的隐式转换了。其实在c系列中的sqrt也没有这么严格的类型检查的。比如DJGPP编译运行：</p>
+<p>#include&lt;math.h&gt;<br>
+...<br>
+int a=3;<br>
+printf(&quot;%5f&quot;, sqrt(a));<br>
+就毫无问题。这里math.h中的声明为<br>
+double sqrt(double _x);</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kingsix-bravo.github.io/post/repost-cde-zhi-zhen-he-lei/">
+              <h3 class="post-title">
+                repost c++的指针和类
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://kingsix-bravo.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
